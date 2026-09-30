@@ -1,13 +1,12 @@
 # initial-status.md — TCMS Initial Project Status
 
-Last updated: 2026-09-30 (Session 2 — Git status correction; docs otherwise unchanged)
+Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687b8a6`)
 
 ## Completed
 
 - [x] Project root inspected: `C:\Telecome` contained **only** `_incoming/` (3 reference zips) — no prior work to preserve
-- [x] Git check performed in Session 1 (then: not a repository). **Update:** repo initialized
-  2026-09-30 04:59 — branch `main`, 0 commits, all files untracked; no commit/reset/clean/push
-  performed by this session (OQ-05)
+- [x] Git: repo initialized 2026-09-30; root commit `687b8a6` created on user request
+  (21 files: 13 docs + 7 todos + `.gitignore`; zips ignored). No push/reset/clean/branch ops.
 - [x] Reference repositories extracted to a temp workspace and read (read-only):
   - `senior-implementation-rules` (RULES.md, meta rules, phase documentation, templates)
   - `pro-skills-senior-full-stack-software-engineer` (project management, requirements/SDLC overview)
@@ -54,7 +53,7 @@ Last updated: 2026-09-30 (Session 2 — Git status correction; docs otherwise un
 | OQ-02 | Is the 7-phase split the doctor's? | Phase plan approval |
 | OQ-03 | Is the 13-file docs list complete? | Docs structure approval |
 | OQ-04 | Scope: academic exercise vs realistic operator system | Scope, modules, boundaries |
-| OQ-05 | Git repo exists (0 commits): commit the documentation, and with what policy? | Review history |
+| OQ-05 | Commit policy for future commits (initial commit `687b8a6` done on request) | Review history |
 | OQ-06 | Actor list confirmation | Phase 2 |
 | OQ-07 | Network/field domain in scope? | Modules, boundaries |
 | OQ-08 | Billing model, NFRs, languages/RTL, integrations | Phases 3–5 |

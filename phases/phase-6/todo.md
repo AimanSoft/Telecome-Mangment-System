@@ -12,7 +12,7 @@ opened by the user.
 ## Tasks
 
 - [ ] 1. Open gate: Phase 5 approved (PD-04, PD-05 resolved)
-- [ ] 2. Repository setup (Git init decision — OQ-05), project skeleton, coding standards
+- [ ] 2. Repository setup (repo exists — confirm commit/branch policy, OQ-05), project skeleton, coding standards
 - [ ] 3. Database schema + migration/rollback scripts for confirmed entities
 - [ ] 4. Authentication & authorization (role × action matrix)
 - [ ] 5. Implement modules in confirmed priority order (TBD from Phase 2)

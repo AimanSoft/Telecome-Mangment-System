@@ -20,3 +20,7 @@ __pycache__/
 
 # Incoming (reference only — not part of project)
 _incoming/*.zip
+
+uploads/
+# Temp files
+err.txt

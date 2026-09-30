@@ -3,7 +3,7 @@
 Purpose: single source of truth for what is **confirmed**, what is **open**, and what is
 **pending**. Assumptions are never stored here as confirmed decisions.
 
-Last updated: 2026-09-30 (Session 2 — Git repo fact added)
+Last updated: 2026-09-30 (Session 4 — Lectures 01 & 02 saved as text under `docs/doctor-sources/lectures/`)
 
 ---
 
@@ -27,13 +27,30 @@ Last updated: 2026-09-30 (Session 2 — Git repo fact added)
 
 - `C:\Telecome` was **empty** (except `_incoming/`) when the project started:
   no `docs/`, no `phases/`, no doctor files, no prior Todo.
-- Git repository initialized 2026-09-30 04:59 (after Session 1): branch `main`, **0 commits**,
-  no remote; `docs/`, `phases/`, `_incoming/` untracked. Nothing has been committed.
+- Git: root commit `687b8a6` on `main` (2026-09-30) covering docs/, phases/, .gitignore;
+  `_incoming/*.zip` gitignored; no remote. Nothing pushed, no reset/clean/branch ops.
 - `_incoming/` contains 3 zips: `delegate-skills`, `pro-skills-senior-full-stack-software-engineer`,
   `senior-implementation-rules`. They were extracted to a temp folder for reading only;
   the zips inside `_incoming/` are untouched.
 - Reference rules are applied selectively; see `docs/implement-plan.md` §7 for the
   adopted / not-adopted lists.
+- **Doctor sources arrived** and live in `docs/doctor-sources/` (index: its `README.md`);
+  originals stay untouched in `C:\Telecome/uploads/`.
+- **Both lectures are available as text:** `lectures/lecture-01-text.md` (51 pages) and
+  `lectures/lecture-02-text.md` (21 pages); Lecture 02 also has `lecture-02-summary.md`
+  (conceptual summary). Duplicate extraction of L2 was removed as junk (Session 5).
+- **Lecture 01 original PDF** in `lectures/` was originally scanned (AnyScanner) and is kept
+  unchanged; the failed extraction stub was removed as junk (Session 5) — the readable text
+  now lives in `lecture-01-text.md`.
+- **Core course concepts:** *System* (4 elements: components, interactions, purpose,
+  boundary) · *Architecture levels* (System / Enterprise / Software; views: Module, C&C,
+  Allocation, 4+1; principles: separation of concerns, trade-off analysis, abstraction,
+  loose coupling, high cohesion, least privilege) · *Integration levels* (data, application,
+  process, UI; integration vs migration) · *Coupling* (direct/tight vs decoupled/loose) ·
+  *Heterogeneous systems* (interoperability, legacy, silos).
+- **Course roadmap:** 11 further lectures (L2 → L14).
+  **Lecture 3 = Foundational Architectural Styles** (Monolithic, Client-Server, Layered,
+  N-Tier, MVC).
 
 ---
 
@@ -41,11 +58,11 @@ Last updated: 2026-09-30 (Session 2 — Git repo fact added)
 
 | ID | Question | Blocks |
 |---|---|---|
-| OQ-01 | Where are the doctor's materials (lectures, PDF, notes)? None exist in the project. | Phase 1 confirmation, phase split validation |
+| OQ-01 | Doctor's materials: **partially resolved** — Lectures 01 (51 pp) and 02 (21 pp) available as text in `docs/doctor-sources/`; projects list + whiteboard notes not yet saved; any further lectures not yet received. Not closed. | Phase 1 confirmation, phase split validation |
 | OQ-02 | Does the doctor use the 7-phase split in `implement-plan.md` §3, or a different one? | Phase plan approval |
 | OQ-03 | Is the required documentation file list complete (13 files), or does the doctor add more? | docs/ structure approval |
 | OQ-04 | Is TCMS a real-world-style system for a telecom operator, or an academic exercise scope? | Scope, modules, boundaries |
-| OQ-05 | Git repo now exists (0 commits): should the documentation be committed, and with what commit policy? | Review history |
+| OQ-05 | Commit policy for *future* commits (initial commit `687b8a6` already made on request) | Change tracking |
 | OQ-06 | Which actors are in scope (admin, customer service, billing, sales, subscriber, technician…)? | Use cases (Phase 2) |
 | OQ-07 | Does the system include network/field-operations domains, or only business/support domains? | Modules, boundaries |
 | OQ-08 | Are there non-functional requirements stated by the doctor (users count, response time, security)? | Architecture, NFRs |

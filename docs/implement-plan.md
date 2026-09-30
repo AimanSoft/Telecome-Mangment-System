@@ -4,7 +4,7 @@
 - Course: System Integration / System Architecture
 - Plan status: **DRAFT — Pending Confirmation of doctor's requirements**
 - Project root: `C:\Telecome`
-- Git: repository initialized 2026-09-30 04:59, branch `main`, **0 commits** (all files untracked) — see §9
+- Git: root commit `687b8a6` on `main` (2026-09-30) — docs + todos + `.gitignore` (zips excluded) — see §9
 
 ---
 
@@ -152,8 +152,8 @@ Explicitly **not** adopted (conflicts with project structure / premature):
   `CHANGELOG.md`, `mind_map.md`, …) — project structure in §5 governs.
 - senior-rules `docs/phases/<slug>/` 16-artifact set — project structure in §5 governs.
 - senior-rules DOD numeric build/test/lint gates — not applicable until Phase 6.
-- senior-rules VCS commit/push gates — the repo exists but has **0 commits**; commit policy
-  awaits an explicit user instruction (OQ-05). Nothing is committed without being asked.
+- senior-rules VCS commit/push gates — partially applicable now: root commit `687b8a6`
+  exists; future commits happen only on explicit user instruction (OQ-05).
 - delegate-skills multi-agent orchestration — not used for any decision that belongs to
   the user; delegation is limited to reading/searching/exploration.
 
@@ -173,11 +173,12 @@ Explicitly **not** adopted (conflicts with project structure / premature):
 
 ## 9. Repository / safety
 
-- `C:\Telecome` **is** a Git repository since 2026-09-30 04:59 (`git init`, branch `main`,
-  0 commits, no remote). Local config has no `user.name`/`user.email` (global `AimanSoft` used).
-  Current status: `docs/`, `phases/`, `_incoming/` are **untracked**.
-  Open: should the initial documentation be committed, and with what policy? (OQ-05)
-- No commit, push, reset, clean, or branch operation was performed by this session.
+- `C:\Telecome` **is** a Git repository: initialized 2026-09-30 04:59, branch `main`,
+  root commit `687b8a6` "chore: initial project structure (Session 1+2)" — 21 files,
+  no remote. `_incoming/*.zip` is gitignored (reference material stays local).
+  Commit policy going forward: conventional commits, only when the user asks (OQ-05 resolved
+  for the initial commit; later policy still open).
+- No push, reset, clean, or branch operation was performed by this session.
 - `_incoming/` is read-only reference material: never modified, never deleted.
 - No existing work was deleted in creating this plan (project contained no prior files).
 

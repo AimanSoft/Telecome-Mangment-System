@@ -6,7 +6,7 @@ has been read in its current state.
 
 Status legend: `[ ]` Not Started · `[~]` In Progress · `[x]` Completed · `[!]` Blocked
 
-Last updated: 2026-09-30 (Session 1)
+Last updated: 2026-09-30 (Session 2 — root commit `687b8a6`; F-02 fixed)
 
 ---
 
@@ -72,7 +72,7 @@ original materials (see `docs/initial-status.md` → Missing Information).
 | ID | Severity | Finding | Status | Action |
 |---|---|---|---|---|
 | F-01 | HIGH | No doctor source materials in the project → all requirements unverified | OPEN | Ask user for the materials |
-| F-02 | MEDIUM | Git repo initialized 2026-09-30 with 0 commits → everything untracked, no review history yet | OPEN | User decision on committing (OQ-05) |
+| F-02 | LOW | Review history was missing; resolved by root commit `687b8a6` (2026-09-30) | FIXED | Future commit policy = OQ-05 |
 | F-03 | MEDIUM | Phase split unverified against the doctor's split | OPEN | Resolve OQ-02 |
 | F-04 | LOW | Status marker `[!]` added to this file beyond the three standard markers | ACCEPTED | Documented in §3 C-8 |
 
@@ -83,5 +83,5 @@ original materials (see `docs/initial-status.md` → Missing Information).
 - **Done (Session 1):** reference repositories read; project inspected; documentation
   skeleton (`docs/`, `phases/phase-1..7`) created; initial drafts written; this audit file created.
 - **Remaining:** confirm doctor requirements; confirm idea/scope/actors/modules;
-  re-run C-1…C-4 after any change; close F-01…F-03.
+  re-run C-1…C-4 after any change; close F-01 and F-03.
 - **Next:** obtain the doctor's materials and answer OQ-01…OQ-03, then re-audit §1 and §2.
