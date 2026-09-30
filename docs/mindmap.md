@@ -11,6 +11,11 @@ requirements are read. Nodes are marked with their confidence level:
 ```mermaid
 mindmap
   root((TCMS))
+    Doctor Sources
+      Lecture 01 text 51 pages
+      Lecture 02 text 21 pages
+      Projects list 26
+      Whiteboard Session 1
     Users
       Administrator (Draft)
       Customer Service (Draft)
@@ -56,6 +61,12 @@ mindmap
 
 ```
 TCMS — Telecom Management System
+│
+├── Doctor Sources (docs/doctor-sources/ — verified, OQ-01 Resolved)
+│   ├── Lecture 01 — text, 51 pages (lecture-01-text.md)
+│   ├── Lecture 02 — text, 21 pages (lecture-02-text.md + summary)
+│   ├── Projects list — 26 projects, TCMS = #16 (projects/projects-list.txt)
+│   └── Whiteboard — Session 1 (whiteboard/whiteboard-notes.md)
 │
 ├── Users (Draft)
 │   ├── Administrator

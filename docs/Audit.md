@@ -6,29 +6,35 @@ has been read in its current state.
 
 Status legend: `[ ]` Not Started · `[~]` In Progress · `[x]` Completed · `[!]` Blocked
 
-Last updated: 2026-09-30 (Session 2 — root commit `687b8a6`; F-02 fixed)
+Last updated: 2026-09-30 (Session 6 — doctor sources fully processed; OQ-01/02/03 resolved; Phase 1 closed)
 
 ---
 
 ## 1. Doctor requirements coverage
 
-- [!] Implement Plan — drafted in `docs/implement-plan.md`, **not confirmed** (doctor sources missing)
-- [!] Use Case Scenario — Initial Draft present (`docs/use-case-scenario.md`)
-- [!] Use Case Action — Initial Draft present (`docs/use-case-action.md`)
-- [!] Flow of Action — Initial Draft present (`docs/flow-of-action.md`)
-- [!] Flow of Event — Initial Draft present (`docs/flow-of-event.md`)
-- [!] Data Flow — Initial Draft present (`docs/data-flow.md`)
-- [!] Website Structure — Initial Draft present (`docs/website-structure.md`)
-- [!] UI/UX Specification — Initial Specification present (`docs/ui-ux-specification.md`)
-- [!] Architecture — Initial Draft present (`docs/architecture.md`)
-- [!] Todo file for each Phase — present (`phases/phase-1..7/todo.md`)
-- [!] mindmap.md — present (`docs/mindmap.md`)
-- [!] Audit.md — this file
-- [!] memory.md — present (`docs/memory.md`)
-- [ ] Any additional file required by the doctor's sources — **unknown, sources missing**
+**Verified against the doctor's whiteboard** (`docs/doctor-sources/whiteboard/whiteboard-notes.md`):
 
-All items above are `[!]` because coverage cannot be confirmed without the doctor's
-original materials (see `docs/initial-status.md` → Missing Information).
+- [x] Implement Plan — `docs/implement-plan.md`
+- [x] Use Case Scenario — `docs/use-case-scenario.md`
+- [x] Use Case Action — `docs/use-case-action.md`
+- [x] Flow of Action — `docs/flow-of-action.md`
+- [x] Flow of Event — `docs/flow-of-event.md`
+- [x] Data Flow — `docs/data-flow.md`
+- [x] Website Structure — `docs/website-structure.md`
+- [x] UI/UX Specification — `docs/ui-ux-specification.md`
+- [x] Architecture — `docs/architecture.md`
+- [x] Todo file for each Phase — `phases/phase-1..7/todo.md`
+- [x] mindmap.md — `docs/mindmap.md`
+- [x] Audit.md — this file
+- [x] memory.md — `docs/memory.md`
+- [x] Any additional file required by the doctor's sources — **Resolved**: whiteboard shows
+  "all other required md file" (generic catch-all; nothing else named)
+
+**Session 6 closures:**
+
+- [x] Doctor sources fully processed (3/3: lectures + projects list + whiteboard)
+- [x] Phase division aligned with Doctor's whiteboard (Phase 1/2/3 named; "Phases المتبقية" → 4–7)
+- [x] 13-doc structure verified (13/13 against whiteboard list)
 
 ---
 
@@ -71,17 +77,20 @@ original materials (see `docs/initial-status.md` → Missing Information).
 
 | ID | Severity | Finding | Status | Action |
 |---|---|---|---|---|
-| F-01 | HIGH | No doctor source materials in the project → all requirements unverified | OPEN | Ask user for the materials |
+| F-01 | HIGH | No doctor source materials in the project → all requirements unverified | FIXED | 3/3 sources now in `docs/doctor-sources/` (lectures, projects list, whiteboard) |
 | F-02 | LOW | Review history was missing; resolved by root commit `687b8a6` (2026-09-30) | FIXED | Future commit policy = OQ-05 |
-| F-03 | MEDIUM | Phase split unverified against the doctor's split | OPEN | Resolve OQ-02 |
+| F-03 | MEDIUM | Phase split unverified against the doctor's split | FIXED | Whiteboard confirms Phase 1/2/3 + "Phases المتبقية" → OQ-02 resolved |
 | F-04 | LOW | Status marker `[!]` added to this file beyond the three standard markers | ACCEPTED | Documented in §3 C-8 |
 
 ---
 
 ## 5. Report — Done / Remaining / Next
 
-- **Done (Session 1):** reference repositories read; project inspected; documentation
-  skeleton (`docs/`, `phases/phase-1..7`) created; initial drafts written; this audit file created.
-- **Remaining:** confirm doctor requirements; confirm idea/scope/actors/modules;
-  re-run C-1…C-4 after any change; close F-01 and F-03.
-- **Next:** obtain the doctor's materials and answer OQ-01…OQ-03, then re-audit §1 and §2.
+- **Done (Sessions 1–6):** documentation skeleton (13 docs + 7 phase todos); reference
+  rules triaged; doctor sources processed 3/3; whiteboard transcription; OQ-01/02/03
+  resolved; F-01/F-02/F-03 fixed; Phase 1 closed; root + docs commits pushed (`687b8a6`,
+  `3862d05`).
+- **Remaining:** §2 content-level reviews (scope, actors, modules, use cases, flows,
+  structure, UI/UX, architecture) — these belong to Phases 1–5 sign-off and depend on
+  OQ-04/06/07/08.
+- **Next:** user approval to start Phase 2; resolve OQ-04/06/07 for use case content.

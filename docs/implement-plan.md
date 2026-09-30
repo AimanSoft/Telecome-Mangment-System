@@ -2,9 +2,9 @@
 
 - Project: نظام إدارة شركات الاتصالات / Telecom Management System (TCMS)
 - Course: System Integration / System Architecture
-- Plan status: **DRAFT — Pending Confirmation of doctor's requirements**
+- Plan status: **DRAFT content — structure & phase split VERIFIED against the doctor's whiteboard** (see §3a)
 - Project root: `C:\Telecome`
-- Git: root commit `687b8a6` on `main` (2026-09-30) — docs + todos + `.gitignore` (zips excluded) — see §9
+- Git: commits `687b8a6` + `3862d05` pushed to `origin/main` (2026-09-30) — see §9
 
 ---
 
@@ -23,7 +23,7 @@ authentication, or technology stack is decided in this plan.
 
 | Rank | Source | Status |
 |---|---|---|
-| 1 | Doctor's instructions (lectures, PDFs, notes, project files) | **NOT YET AVAILABLE in project** — see §10 |
+| 1 | Doctor's instructions (lectures, PDFs, notes, project files) | **AVAILABLE** — Lectures 01/02 (text), projects list, whiteboard (`docs/doctor-sources/`) — see §10 |
 | 2 | This plan + `docs/*` + `phases/*/todo.md` | Draft, pending doctor confirmation |
 | 3 | `_incoming/senior-implementation-rules` | Applied selectively (see §7) |
 | 4 | `_incoming/pro-skills-senior-full-stack-software-engineer` | Applied selectively (see §7) |
@@ -46,12 +46,26 @@ is ever invented from a reference repository.
 | Phase 6 | Implementation | Build (blocked until Phases 1–5 accepted) |
 | Phase 7 | Testing, Audit & Final Review | Test plan, Audit, final consistency review |
 
-**Status of this breakdown: DRAFT — Pending Confirmation.**
-No source in the project currently defines the doctor's phase split, so this split cannot
-be compared against the doctor's version yet. When the doctor's materials arrive:
+**Status of this breakdown: VERIFIED against the doctor's whiteboard (OQ-02 Resolved)** —
+see §3a. Content details of each phase remain subject to the doctor's future instructions.
 
-- if the doctor uses a different split → the doctor's split is adopted;
-- this file must then be updated and the difference explained in this section (not hidden).
+---
+
+## 3a. Doctor's Whiteboard Verification (OQ-02 Resolved)
+
+Source: `docs/doctor-sources/whiteboard/whiteboard-notes.md` (classroom photo transcription).
+
+- **Phase 1, Phase 2, Phase 3 are named explicitly** on the whiteboard → the first three
+  phases of our split match the doctor's naming.
+- **"Phases المتبقية"** (the remaining phases) → supports our Phase 4–7 (structure, flows,
+  architecture, implementation, testing/audit).
+- **"اكتب phase في ملف منفصل"** (write each phase in a separate file) → matches our
+  `phases/phase-N/todo.md` structure exactly.
+- **"Todo file for each Phase"** on the whiteboard list → matches our phase todos (13-doc list).
+- **Intentional difference (no structure change):** `SEO`, `Home/About`,
+  `house plan / home page` appear on the whiteboard → these are **website/UI concerns**
+  handled in **Phase 4 (Website Structure & UI/UX)**, not separate deliverables.
+- Full item-by-item comparison: `docs/doctor-sources/whiteboard/whiteboard-notes.md` §9.
 
 **Difference already found in reference sources (declared openly):**
 `_incoming/senior-implementation-rules` defines a different documentation model
@@ -173,26 +187,27 @@ Explicitly **not** adopted (conflicts with project structure / premature):
 
 ## 9. Repository / safety
 
-- `C:\Telecome` **is** a Git repository: initialized 2026-09-30 04:59, branch `main`,
-  root commit `687b8a6` "chore: initial project structure (Session 1+2)" — 21 files,
-  no remote. `_incoming/*.zip` is gitignored (reference material stays local).
-  Commit policy going forward: conventional commits, only when the user asks (OQ-05 resolved
-  for the initial commit; later policy still open).
-- No push, reset, clean, or branch operation was performed by this session.
+- `C:\Telecome` **is** a Git repository on branch `main`, remote
+  `origin = https://github.com/AimanSoft/Telecome-Mangment-System.git`.
+  Commits: `687b8a6` (initial structure) + `3862d05` (doctor sources) — **both pushed**.
+  `.gitignore` excludes `_incoming/*.zip`, `uploads/`, `err.txt`, env/IDE/node noise.
+  Commit policy: conventional commits, only on explicit user request (OQ-05).
+- No reset, clean, force, or branch deletion was ever performed.
 - `_incoming/` is read-only reference material: never modified, never deleted.
-- No existing work was deleted in creating this plan (project contained no prior files).
+- Junk files removed by explicit user instruction (Session 5/6): `err.txt`,
+  `lecture-1-extracted.md`, duplicate L2 extraction. No project work deleted.
 
 ---
 
-## 10. Missing information (blocking)
+## 10. Missing information
 
-- **No doctor materials found** in `C:\Telecome` (no lectures, PDFs, TXT, MD notes,
-  Project Knowledge, or prior `docs/`). Everything in §3–§8 is therefore Draft until
-  those materials are provided.
-- The requirement list used here (Implement Plan, Use Case Scenario, Use Case Action,
-  Flow of Action, Flow of Event, Data Flow, Website Structure, UI/UX Specification,
-  Architecture, Phase Todo, mindmap.md, Audit.md, memory.md) is taken from the project
-  brief and **must be verified** against the doctor's own list.
+- **Doctor materials: AVAILABLE (3/3)** — Lectures 01/02 as text, projects list
+  (26 projects, TCMS = #16), whiteboard transcription — all under `docs/doctor-sources/`.
+- **Requirement list verified:** the 13-doc list matches the doctor's whiteboard 13/13
+  (see §3a); "all other required md file" is a catch-all for future needs.
+- **Still missing:** content-level inputs — scope depth (OQ-04), actor list (OQ-06),
+  network/field domain (OQ-07), NFRs/billing model (OQ-08), prescribed notation/templates,
+  acceptance criteria, lectures 03–14.
 
 ---
 

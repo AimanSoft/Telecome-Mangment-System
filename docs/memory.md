@@ -3,7 +3,7 @@
 Purpose: single source of truth for what is **confirmed**, what is **open**, and what is
 **pending**. Assumptions are never stored here as confirmed decisions.
 
-Last updated: 2026-09-30 (Session 4 — Lectures 01 & 02 saved as text under `docs/doctor-sources/lectures/`)
+Last updated: 2026-09-30 (Session 6 — doctor sources fully processed: whiteboard transcribed, OQ-01/02/03 resolved)
 
 ---
 
@@ -36,6 +36,10 @@ Last updated: 2026-09-30 (Session 4 — Lectures 01 & 02 saved as text under `do
   adopted / not-adopted lists.
 - **Doctor sources arrived** and live in `docs/doctor-sources/` (index: its `README.md`);
   originals stay untouched in `C:\Telecome/uploads/`.
+- **Doctor's projects list saved** → `doctor-sources/projects/projects-list.txt` (verbatim):
+  26 proposed projects — **TCMS = #16 نظام إدارة شركات الاتصالات**; groups ≤10 students;
+  idea + initial analysis due before next lecture's session; non-project students graded by
+  exam only; the engineer helps with per-phase plans.
 - **Both lectures are available as text:** `lectures/lecture-01-text.md` (51 pages) and
   `lectures/lecture-02-text.md` (21 pages); Lecture 02 also has `lecture-02-summary.md`
   (conceptual summary). Duplicate extraction of L2 was removed as junk (Session 5).
@@ -58,9 +62,9 @@ Last updated: 2026-09-30 (Session 4 — Lectures 01 & 02 saved as text under `do
 
 | ID | Question | Blocks |
 |---|---|---|
-| OQ-01 | Doctor's materials: **partially resolved** — Lectures 01 (51 pp) and 02 (21 pp) available as text in `docs/doctor-sources/`; projects list + whiteboard notes not yet saved; any further lectures not yet received. Not closed. | Phase 1 confirmation, phase split validation |
-| OQ-02 | Does the doctor use the 7-phase split in `implement-plan.md` §3, or a different one? | Phase plan approval |
-| OQ-03 | Is the required documentation file list complete (13 files), or does the doctor add more? | docs/ structure approval |
+| OQ-01 | Doctor's materials (lectures + projects list + whiteboard) | **Resolved** — all 3 sources documented under `docs/doctor-sources/` (lectures 01/02 text, `projects/projects-list.txt`, `whiteboard/whiteboard-notes.md`) |
+| OQ-02 | Does the doctor use the 7-phase split in `implement-plan.md` §3, or a different one? | **Resolved** — whiteboard names Phase 1/2/3 explicitly + "Phases المتبقية" (→ 4–7) + "اكتب phase في ملف منفصل" = our structure |
+| OQ-03 | Is the required documentation file list complete (13 files), or does the doctor add more? | **Resolved** — whiteboard lists 9 core docs + mindmap/Audit/memory + "Todo for each Phase" + "all other required md file" = 13/13 |
 | OQ-04 | Is TCMS a real-world-style system for a telecom operator, or an academic exercise scope? | Scope, modules, boundaries |
 | OQ-05 | Commit policy for *future* commits (initial commit `687b8a6` already made on request) | Change tracking |
 | OQ-06 | Which actors are in scope (admin, customer service, billing, sales, subscriber, technician…)? | Use cases (Phase 2) |
@@ -78,6 +82,19 @@ Last updated: 2026-09-30 (Session 4 — Lectures 01 & 02 saved as text under `do
 | PD-03 | Approve or replace the initial actor list | User / Doctor |
 | PD-04 | Technology stack — **not to be decided before Phase 5/6** | User / Doctor |
 | PD-05 | Architecture style (monolith / modular / services / event-driven) — **not decided** | User / Doctor |
+
+---
+
+## 4A. Session 3 — Doctor Sources Fully Processed
+
+- **Projects list preserved** — `doctor-sources/projects/projects-list.txt` (26 projects; **#16 = TCMS**).
+- **Whiteboard transcribed** — `doctor-sources/whiteboard/whiteboard-notes.md`, with per-item
+  confidence markers `[مؤكد]` / `[غير واضح]`.
+- **Phase 1 / Phase 2 / Phase 3 confirmed by name** on the doctor's whiteboard.
+- **"اكتب phase في ملف منفصل"** (write each phase in a separate file) = our
+  `phases/phase-N/todo.md` structure — confirmed.
+- **Discoveries:** `SEO`, `Home/About`, `house plan / home page` appear on the whiteboard →
+  handled in **Phase 4** (Website Structure); no structure change needed.
 
 ---
 

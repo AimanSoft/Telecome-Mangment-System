@@ -1,6 +1,6 @@
 # initial-status.md — TCMS Initial Project Status
 
-Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687b8a6`)
+Last updated: 2026-09-30 (Session 6 — doctor sources fully processed; Phase 1 closed; OQ-01/02/03 resolved)
 
 ## Completed
 
@@ -17,16 +17,17 @@ Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687
 - [x] Phase todos created: `phases/phase-1..7/todo.md`
 - [x] Status system applied (`[ ]` / `[~]` / `[x]`, plus `[!]` Blocked only in `Audit.md`)
 - [x] Verified: **no** Backend, Frontend, DB schema, APIs, Auth, stack decision, or production code exists
+- [x] **Doctor sources processed 3/3:** Lectures 01 (51 pp) + 02 (21 pp) as text ·
+  `projects/projects-list.txt` (26 projects, TCMS = #16) · `whiteboard/whiteboard-notes.md`
+- [x] **Phase 1 — Project Planning & Initial Analysis: 100% coverage, [x] Completed** (closed per user decision; see `phases/phase-1/todo.md` Closure Note)
+- [x] Whiteboard verification: 13/13 docs structure + Phase 1/2/3 named → OQ-02, OQ-03 resolved
 
 ## In Progress
 
-- [~] Phase 1 items 1–9 (drafts written, awaiting confirmation)
-- [~] Initial analysis artifacts (`use-case-*`, `flow-*`, `data-flow`, `website-structure`, `ui-ux-specification`, `architecture`) — all `Initial Draft`
-- [~] Implementation plan review (written, not yet reviewed by user/doctor)
+- [~] None — Phase 1 closed; Phase 2 awaits explicit user approval
 
 ## Not Started
 
-- [ ] Phase 1 items 10–11 (deliverable review, completion review) — blocked
 - [ ] Phase 2 Use Case Analysis
 - [ ] Phase 3 System Flows & Data Flow (finalization)
 - [ ] Phase 4 Website Structure & UI/UX (finalization)
@@ -36,7 +37,7 @@ Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687
 
 ## Draft
 
-- `docs/implement-plan.md` §3 phase split (7 phases) — Draft, Pending Confirmation
+- `docs/implement-plan.md` §3 phase split (7 phases) — **structure verified vs whiteboard (OQ-02 Resolved)**; per-phase content still Draft
 - `docs/use-case-scenario.md` — actors A-1…A-6, modules M-1…M-9, UC-01…UC-09 — all Draft
 - `docs/use-case-action.md` — all actions Draft
 - `docs/flow-of-action.md`, `docs/flow-of-event.md`, `docs/data-flow.md` — Initial Drafts
@@ -49,22 +50,22 @@ Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687
 
 | ID | Question | Impact |
 |---|---|---|
-| OQ-01 | Where are the doctor's materials? None found in the project | Blocks confirmation of every requirement |
-| OQ-02 | Is the 7-phase split the doctor's? | Phase plan approval |
-| OQ-03 | Is the 13-file docs list complete? | Docs structure approval |
+| OQ-01 | Doctor's materials (lectures + projects list + whiteboard) | **Resolved** — 3/3 sources in `docs/doctor-sources/` |
+| OQ-02 | Is the 7-phase split the doctor's? | **Resolved** — whiteboard: Phase 1/2/3 named + "Phases المتبقية" (→4–7) |
+| OQ-03 | Is the 13-file docs list complete? | **Resolved** — whiteboard: 13/13 confirmed |
 | OQ-04 | Scope: academic exercise vs realistic operator system | Scope, modules, boundaries |
-| OQ-05 | Commit policy for future commits (initial commit `687b8a6` done on request) | Review history |
+| OQ-05 | Commit policy for future commits (commits `687b8a6`, `3862d05` made on request) | Review history |
 | OQ-06 | Actor list confirmation | Phase 2 |
 | OQ-07 | Network/field domain in scope? | Modules, boundaries |
 | OQ-08 | Billing model, NFRs, languages/RTL, integrations | Phases 3–5 |
 
 ## Missing Information
 
-- Doctor's lectures / PDF / TXT / MD notes / Project Knowledge — **not present in `C:\Telecome`**
+- ~~Doctor's lectures / projects list / whiteboard~~ — **now present** (`docs/doctor-sources/`)
 - Doctor's prescribed templates or notation for use cases, flows, structure, UI/UX, architecture
 - Doctor's acceptance criteria and grading/evaluation criteria
 - Non-functional requirements, security scope, data retention/privacy rules
-- Existing `docs/implement-plan.md` / `phases/phase-1/todo.md` mentioned in the brief — **did not exist**; built new (nothing deleted)
+- Lectures 03–14 (future sessions)
 
 ## Doctor Requirements Coverage
 
@@ -79,15 +80,16 @@ Last updated: 2026-09-30 (Session 2 — Git status correction + root commit `687
 | Website Structure | `docs/website-structure.md` | Initial Structure |
 | UI/UX Specification | `docs/ui-ux-specification.md` | Initial Specification |
 | Architecture | `docs/architecture.md` | Architecture Initial Draft |
-| Todo per Phase | `phases/phase-1..7/todo.md` | Present (Phase 1 partly In Progress) |
+| Todo per Phase | `phases/phase-1..7/todo.md` | Present (Phase 1 **Completed**, Phases 2–7 Not Started) |
 | mindmap.md | `docs/mindmap.md` | Draft |
 | memory.md | `docs/memory.md` | Current |
-| Audit.md | `docs/Audit.md` | Checklist open |
-| Additional doctor-required files | unknown | **Not covered — sources missing (OQ-01)** |
+| Audit.md | `docs/Audit.md` | Checklist open (§1 coverage verified) |
+| Whiteboard verification | `docs/doctor-sources/whiteboard/whiteboard-notes.md` | ✅ **Verified** — 13/13 docs + Phase 1/2/3 named |
+| Additional doctor-required files | — | ✅ **Resolved** — whiteboard covers all; "all other required md file" noted for future needs |
 
 ## Next Recommended Step
 
-1. Provide the doctor's source materials (OQ-01) — everything else depends on them.
-2. Answer OQ-02…OQ-04 (phase split, docs list, scope).
-3. Re-run `docs/Audit.md` §1–§2 and confirm Phase 1 deliverables (Phase 1 tasks 10–11).
-4. Only then start Phase 2. No implementation, no stack, no schema before Phase 6 gate.
+1. User approval to start **Phase 2 — Use Case Analysis** (Phase 1 is closed).
+2. Resolve content-level OQ-04, OQ-06, OQ-07 (scope, actors, network domain) — feeding Phase 2.
+3. Continue lecture series as it arrives (L03: Foundational Architectural Styles).
+4. No implementation, no stack, no schema before the Phase 6 gate.

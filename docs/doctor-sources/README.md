@@ -33,10 +33,19 @@ never edited to change meaning, never deleted. Originals of every attachment als
 
 Unmodified copies of attachments live in `C:\Telecome/uploads/` (read-only source area).
 
-## Planned — not created yet
+## Projects list
 
-- `projects-list.txt` — doctor's list of 26 proposed projects (TCMS = #16) + group/deadline rules
-- `whiteboard-notes.md` — transcription of the whiteboard photo (13-doc structure confirmation)
+- [`projects/projects-list.txt`](projects/projects-list.txt) — نص رسالة الدكتور حرفيًا
+  (2026/9/15): **26 مشروعًا مقترحًا** لطلاب المستوى الرابع — مشروعنا = **#16 نظام إدارة
+  شركات الاتصالات** + روابط المهارات المطلوبة (pro-skills, delegate-skills) + قواعد
+  (جروبات ≤10 طلاب · تسليم فكرة وتحليل أولي قبل محاضرة الأسبوع القادم · غير العاملين على
+  مشروع تقييمهم بالاختبار · مساعة المهندس في خطط كل مرحلة).
+
+## Whiteboard
+
+- [`whiteboard/whiteboard-notes.md`](whiteboard/whiteboard-notes.md) — تفريغ صورة السبورة
+  (Session 1) بمؤشرات ثقة `[مؤكد]` / `[غير واضح]`: قائمة ملفات الـ13 ✓ · Phase 1/2/3 بالاسم ✓ ·
+  "اكتب phase في ملف منفصل" ✓ · عناصر SEO / Home-About / house plan → Phase 4.
 
 ## Related
 

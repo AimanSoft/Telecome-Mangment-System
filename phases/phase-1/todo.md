@@ -1,5 +1,7 @@
 # Phase 1
 
+> **Status: [x] COMPLETED** — closed Session 6 per user decision (see Closure Note).
+
 ## Objective
 
 Project Planning & Initial Analysis: confirm the project idea, define the initial scope,
@@ -8,17 +10,17 @@ project boundaries — and produce the first reviewable documentation set for TC
 
 ## Tasks
 
-- [~] 1. Review and confirm project idea — *draft written; needs user/doctor confirmation*
-- [~] 2. Define initial project scope — *draft in `docs/implement-plan.md` §3, `docs/use-case-scenario.md`*
-- [~] 3. Define main objective — *draft in this phase's deliverables; pending confirmation*
-- [~] 4. Identify main users/actors — *draft list A-1…A-6 in `docs/use-case-scenario.md` §2*
-- [~] 5. Identify main modules at high level — *draft list M-1…M-9*
-- [~] 6. Identify initial operations — *UC-01…UC-09 in `docs/use-case-scenario.md` §4*
-- [~] 7. Identify initial data entities — *conceptual entities in `docs/data-flow.md` §5*
-- [~] 8. Define project boundaries — *draft in `docs/architecture.md` §2*
-- [~] 9. Review implementation plan — *written in `docs/implement-plan.md`; review pending*
-- [ ] 10. Review Phase 1 deliverables — *blocked by missing doctor sources (OQ-01)*
-- [ ] 11. Phase 1 completion review — *blocked by tasks 10 + confirmation*
+- [x] 1. Review and confirm project idea — *confirmed: TCMS = project #16 (`doctor-sources/projects/projects-list.txt`)*
+- [x] 2. Define initial project scope — *draft in `docs/implement-plan.md` §3, `docs/use-case-scenario.md`*
+- [x] 3. Define main objective — *documented; depth sign-off carried to OQ-04*
+- [x] 4. Identify main users/actors — *draft list A-1…A-6 in `docs/use-case-scenario.md` §2 (confirmation → OQ-06)*
+- [x] 5. Identify main modules at high level — *draft list M-1…M-9*
+- [x] 6. Identify initial operations — *UC-01…UC-09 in `docs/use-case-scenario.md` §4*
+- [x] 7. Identify initial data entities — *conceptual entities in `docs/data-flow.md` §5*
+- [x] 8. Define project boundaries — *draft in `docs/architecture.md` §2*
+- [x] 9. Review implementation plan — *written and verified against the whiteboard (OQ-02/OQ-03 resolved)*
+- [x] 10. Review Phase 1 deliverables — *13/13 deliverables verified against the doctor's whiteboard*
+- [x] 11. Phase 1 completion review — *closed per user decision (Session 6); residuals tracked below*
 
 ## Deliverables
 
@@ -39,24 +41,41 @@ project boundaries — and produce the first reviewable documentation set for TC
 
 ## Completion Criteria
 
-- [ ] All tasks above marked `[x]` **with reviewable evidence**
-- [ ] Project idea confirmed by user/doctor
+- [x] All tasks above marked `[x]` **with reviewable evidence**
+- [x] Project idea confirmed by user/doctor (TCMS = #16)
 - [ ] Scope, objective, actors, modules, operations, data, boundaries confirmed
-- [ ] `docs/Audit.md` §2 checklist fully checked
-- [ ] Open Questions OQ-01…OQ-04 resolved or explicitly deferred
-- [ ] No task marked completed without existing, readable content
+      — *residuals carried forward as OQ-04 / OQ-06 / OQ-07 / OQ-08 (explicitly deferred at closure per user decision)*
+- [ ] `docs/Audit.md` §2 checklist fully checked — *content-level reviews belong to
+      Phases 2–5 sign-off (§1 coverage is checked)*
+- [x] Open Questions OQ-01…OQ-04 resolved or explicitly deferred
+      (OQ-01/02/03 Resolved; OQ-04 deferred)
+- [x] No task marked completed without existing, readable content
 
 ## Dependencies
 
-- Doctor's source materials (missing → OQ-01)
-- User confirmation of drafts (PD-01, PD-02, PD-03)
+- ~~Doctor's source materials~~ — **received: 3/3** (lectures 01/02, projects list, whiteboard)
+- User confirmation of drafts — *structure confirmed via whiteboard; content items → Phase 2*
 
 ## Open Questions
 
-- OQ-01 Where are the doctor's materials?
-- OQ-02 Is the 7-phase split correct?
-- OQ-03 Is the 13-file documentation list complete?
-- OQ-04 Scope level: academic exercise vs realistic operator system
-- OQ-06 Actor list confirmation
-- OQ-07 Network/field domain in or out of scope
-- OQ-08 Billing model, NFRs, languages
+- ~~OQ-01~~ **Resolved** (3/3 sources in `docs/doctor-sources/`)
+- ~~OQ-02~~ **Resolved** (whiteboard: Phase 1/2/3 + "Phases المتبقية")
+- ~~OQ-03~~ **Resolved** (whiteboard: 13/13 docs)
+- OQ-04 Scope level: academic exercise vs realistic operator system → **carried to Phase 2**
+- OQ-06 Actor list confirmation → **carried to Phase 2**
+- OQ-07 Network/field domain in or out of scope → **carried to Phase 2**
+- OQ-08 Billing model, NFRs, languages → **carried to Phases 3–5**
+
+## Closure Note
+
+- **Phase 1: [x] Completed** — closed Session 6 per user decision.
+- **OQ-01 / OQ-02 / OQ-03 → Resolved** (lectures + projects list + whiteboard all documented).
+- **Doctor sources processed 3/3:** `lectures/lecture-01-text.md` (51 pp),
+  `lectures/lecture-02-text.md` (21 pp), `projects/projects-list.txt` (26 projects, TCMS = #16),
+  `whiteboard/whiteboard-notes.md`.
+- **Deliverables: 13/13 confirmed** against the doctor's whiteboard (docs 9 + mindmap/Audit/memory + phase todos).
+- **Phase division confirmed:** Phase 1/2/3 named on the whiteboard; "Phases المتبقية" → Phase 4–7;
+  "اكتب phase في ملف منفصل" = our `phases/phase-N/todo.md` structure.
+- **Carried forward (not blocking Phase 2 start):** OQ-04 (scope depth), OQ-06 (actors),
+  OQ-07 (network domain), OQ-08 (NFRs/billing) + Audit §2 content reviews.
+- **Ready for Phase 2 — upon user approval only.**
