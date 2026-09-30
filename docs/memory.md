@@ -98,6 +98,17 @@ Last updated: 2026-09-30 (Session 6 — doctor sources fully processed: whiteboa
 
 ---
 
+## Team (Confirmed)
+
+- Size: 8 members (within Doctor's limit ≤10 ✅)
+- Source: docs/doctor-sources/team.md
+- Repo Owner: AimanSoft
+- Confirmed usernames: 5/8 (aim45an, AimanSoft, wwwyhye00-dev, almorady55, alhareth447)
+- Pending usernames: عمار، أسامة، خليل أمين
+- Roles: Not yet assigned
+
+---
+
 ## 5. Important notes
 
 - Nothing in `docs/` is a Confirmed Requirement unless it is listed in §1 or explicitly
