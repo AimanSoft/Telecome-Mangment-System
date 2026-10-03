@@ -3,7 +3,7 @@
 > Project: #16 — Telecom Management System (TCMS)
 > Course: System Integration & Architecture
 > Doctor's Rule: Maximum 10 students per group ✅
-> Team Size: 8 members
+> Team Size: 7 members
 
 ## Members
 
@@ -14,9 +14,8 @@
 | 3 | يحيى | wwwyhye00-dev | TBD | Confirmed |
 | 4 | شوقي | almorady55 | TBD | Confirmed |
 | 5 | حارث | alhareth447 | TBD | Confirmed |
-| 6 | عمار | [Pending] | TBD | Username pending |
-| 7 | أسامة | [Pending] | TBD | Username pending |
-| 8 | خليل أمين | [Pending] | TBD | Username pending |
+| 6 | عمار | amaralslamy | TBD | Confirmed |
+| 7 | أسامة | Osama-Alqasemi | TBD | Confirmed |
 
 ## Repository
 
@@ -45,7 +44,4 @@ Not assigned yet. Candidates for Phase 2+:
 
 ## Open Questions
 
-- عمار's GitHub username
-- أسامة's GitHub username
-- خليل أمين's GitHub username
 - Role assignment (deferred to Phase 2 or when Doctor specifies)

@@ -16,15 +16,14 @@ mindmap
       Lecture 02 text 21 pages
       Projects list 26
       Whiteboard Session 1
-    Team 8 members
+    Team 7 members
       AimanSoft owner
       aim45an
       wwwyhye00-dev
       almorady55
       alhareth447
-      عمار pending
-      أسامة pending
-      خليل أمين pending
+      عمار amaralslamy
+      أسامة Osama-Alqasemi
     Users
       Administrator (Draft)
       Customer Service (Draft)
@@ -77,15 +76,14 @@ TCMS — Telecom Management System
 │   ├── Projects list — 26 projects, TCMS = #16 (projects/projects-list.txt)
 │   └── Whiteboard — Session 1 (whiteboard/whiteboard-notes.md)
 │
-├── Team (8 members — docs/doctor-sources/team.md)
+├── Team (7 members — docs/doctor-sources/team.md)
 │   ├── AimanSoft (owner)
 │   ├── aim45an
 │   ├── wwwyhye00-dev
 │   ├── almorady55
 │   ├── alhareth447
-│   ├── عمار [pending]
-│   ├── أسامة [pending]
-│   └── خليل أمين [pending]
+│   ├── عمار (amaralslamy)
+│   └── أسامة (Osama-Alqasemi)
 │
 ├── Users (Draft)
 │   ├── Administrator

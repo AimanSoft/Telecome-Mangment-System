@@ -1,41 +1,108 @@
-# Phase 2
+# Phase 2 — Use Case Analysis
 
 ## Objective
 
-Use Case Analysis: finalize the use case set, write full use case scenarios and use case
-actions from the confirmed modules/actors, and make `docs/use-case-scenario.md` and
-`docs/use-case-action.md` final instead of Initial Draft.
+Analyze and document all Use Cases for TCMS based on the confirmed actors and modules from Phase 1. Produce Use Case Scenarios and Use Case Actions in the format approved by the Doctor.
+
+## Pre-conditions (مطلوب قبل البدء)
+
+- [ ] OQ-06 (Actor list) resolved and approved by Doctor/Engineer
+- [ ] Use Case template received from Doctor (Cockburn / UML / Tabular)
+- [ ] Rubric for grading Use Cases received
+- [ ] Confirmation that Phase 1 initial delivery was accepted
 
 ## Tasks
 
-- [ ] 1. Confirm actor list (PD-03)
-- [ ] 2. Confirm module list (PD-02)
-- [ ] 3. Enumerate complete use case set from confirmed requirements
-- [ ] 4. Write dressed use case scenarios (preconditions, main/alternate/exception flows, postconditions)
-- [ ] 5. Derive use case actions for every use case
-- [ ] 6. Map use cases ↔ actors ↔ modules
-- [ ] 7. Review `docs/Audit.md` items "Use Cases reviewed", "Actions reviewed"
-- [ ] 8. Phase 2 completion review
+### A. Preparation
+- [ ] Confirm final actor list from Phase 1 initial analysis
+- [ ] Cross-check actors against Doctor's whiteboard requirements
+- [ ] Receive Use Case template (format specification)
+- [ ] Set naming conventions (UC-01, UC-02, ...)
+- [ ] Confirm level of detail (brief / casual / fully-dressed)
+
+### B. Use Case Identification
+- [ ] List all candidate Use Cases per actor
+- [ ] Categorize by module (Subscribers, Services, Billing, Support, Network, Admin)
+- [ ] Prioritize (Must-have / Should-have / Could-have)
+- [ ] Review with team (7 members)
+- [ ] Freeze the Use Case list
+
+### C. Use Case Scenario Writing
+- [ ] For each Use Case: write Pre-conditions
+- [ ] For each Use Case: write Main Flow (Happy Path)
+- [ ] For each Use Case: write Alternate Flows
+- [ ] For each Use Case: write Exception Flows
+- [ ] For each Use Case: write Post-conditions
+- [ ] Cross-reference with data entities from Phase 1
+
+### D. Use Case Action Writing
+- [ ] For each Use Case: identify Actor Actions
+- [ ] For each Use Case: identify System Actions
+- [ ] Map Action → Trigger → Result
+- [ ] Verify coverage (each UC has at least 1 action)
+
+### E. Diagram (if required by Doctor)
+- [ ] Create Use Case Diagram (UML)
+- [ ] Show Actors, Use Cases, relationships
+- [ ] Include «include» and «extend» where applicable
+- [ ] Save as docs/diagrams/use-case-diagram.png or .puml
+
+### F. Consistency & Review
+- [ ] All Use Cases consistent with Phase 1 actors
+- [ ] All Use Cases consistent with Phase 1 modules
+- [ ] All Use Cases reference valid data entities
+- [ ] No orphan actions
+- [ ] Internal team review
+- [ ] Update docs/Audit.md with Phase 2 checklist
+- [ ] Update docs/memory.md with Phase 2 decisions
+
+### G. Phase 2 Closure
+- [ ] All Phase 2 tasks marked [x]
+- [ ] All deliverables present
+- [ ] Update docs/initial-status.md
+- [ ] Update docs/mindmap.md with Use Cases
+- [ ] Commit + push
 
 ## Deliverables
 
-- [ ] `docs/use-case-scenario.md` — final (replaces Initial Draft)
-- [ ] `docs/use-case-action.md` — final (replaces Initial Draft)
-- [ ] Updated `docs/memory.md` (confirmed decisions from Phase 2)
-- [ ] Updated `docs/Audit.md`
+- docs/use-case-scenario.md — Complete (not Draft)
+- docs/use-case-action.md — Complete (not Draft)
+- docs/diagrams/use-case-diagram.* (if required)
+- Updated docs/mindmap.md
+- Updated docs/memory.md
+- Updated docs/Audit.md
+- Updated phases/phase-2/todo.md (this file, [x] marked)
 
 ## Completion Criteria
 
-- [ ] Every confirmed requirement maps to at least one use case
-- [ ] Every use case has actions, actors, and touched data
-- [ ] No use case invented without a source
-- [ ] Phase 1 closed before Phase 2 starts
+- [ ] Every Use Case has: Pre-conditions, Main Flow, Alternate Flows, Post-conditions
+- [ ] Every Use Case has at least one Actor Action
+- [ ] Every Use Case references valid data entity
+- [ ] Use Case diagram covers 100% of Use Cases
+- [ ] No Use Case contradicts Phase 1
+- [ ] Doctor's template followed exactly
+- [ ] Internal peer review passed
+- [ ] Git commit signed off
 
 ## Dependencies
 
-- Phase 1 completion (currently blocked by OQ-01)
+- ✅ Phase 1 — Completed
+- ⏳ OQ-06 (Actor list) — Pending
+- ⏳ Use Case template from Doctor — Pending
+- ⏳ Phase 1 delivery acceptance — Pending
 
 ## Open Questions
 
-- Does the doctor prescribe a use case notation/template? (OQ-01)
-- Which of UC-01…UC-09 survive confirmation?
+- OQ-06: Final actor list?
+- OQ-08: Language (AR/EN/Both)? RTL support?
+- Use Case template: Cockburn? UML? Tabular?
+- Use Case diagram required or optional?
+- Number of Use Cases expected: 10? 20? 30?
+- Level of detail: brief or fully-dressed?
+
+## Notes
+
+- لا تبدأ كتابة Use Cases فعلية قبل استيفاء Pre-conditions.
+- كل بيانات الفريق في docs/doctor-sources/team.md
+- Team size: 7 members — يمكن توزيع Use Cases
+- Deadline: after Doctor's confirmation

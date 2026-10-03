@@ -21,7 +21,7 @@ Last updated: 2026-09-30 (Session 6 — doctor sources fully processed; Phase 1 
   `projects/projects-list.txt` (26 projects, TCMS = #16) · `whiteboard/whiteboard-notes.md`
 - [x] **Phase 1 — Project Planning & Initial Analysis: 100% coverage, [x] Completed** (closed per user decision; see `phases/phase-1/todo.md` Closure Note)
 - [x] Whiteboard verification: 13/13 docs structure + Phase 1/2/3 named → OQ-02, OQ-03 resolved
-- [x] Team members documented (8/8 names, 5/8 usernames)
+- [x] Team members documented (7/7 names, 7/7 usernames)
 
 ## In Progress
 
