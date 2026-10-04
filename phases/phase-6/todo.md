@@ -1,5 +1,8 @@
 # Phase 6
 
+> ⚠️ Phase Division Pending Confirmation — Doctor explicitly mentioned
+> only Phase 1, 2, 3. Phase 4-7 is a team proposal.
+
 ## Objective
 
 Implementation: build the system according to the approved architecture and confirmed

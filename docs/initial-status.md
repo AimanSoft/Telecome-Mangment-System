@@ -37,6 +37,7 @@ Last updated: 2026-10-04 (Session 7 — aim45an diagrams analyzed; Phases 2/3/5/
 
 ## Draft
 
+- Phase 4-7 division (Team Proposal)
 - `docs/implement-plan.md` §3 phase split (7 phases) — **structure verified vs whiteboard (OQ-02 Resolved)**; per-phase content still Draft
 - `docs/use-case-scenario.md` — actors A-1…A-6, modules M-1…M-9, UC-01…UC-09 — all Draft
 - `docs/use-case-action.md` — all actions Draft

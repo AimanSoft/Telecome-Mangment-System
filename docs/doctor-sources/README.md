@@ -44,8 +44,8 @@ Unmodified copies of attachments live in `C:\Telecome/uploads/` (read-only sourc
 ## Whiteboard
 
 - [`whiteboard/whiteboard-notes.md`](whiteboard/whiteboard-notes.md) — تفريغ صورة السبورة
-  (Session 1) بمؤشرات ثقة `[مؤكد]` / `[غير واضح]`: قائمة ملفات الـ13 ✓ · Phase 1/2/3 بالاسم ✓ ·
-  "اكتب phase في ملف منفصل" ✓ · عناصر SEO / Home-About / house plan → Phase 4.
+  (Session 1) بمؤشرات ثقة `[مؤكد]`: قائمة ملفات الـ13 ✓ · Phase 1/2/3 بالاسم ✓ ·
+  "اكتب phase في ملف منفصل" ✓.
 
 ## Related
 

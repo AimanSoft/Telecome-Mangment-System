@@ -62,10 +62,9 @@ Source: `docs/doctor-sources/whiteboard/whiteboard-notes.md` (classroom photo tr
 - **"اكتب phase في ملف منفصل"** (write each phase in a separate file) → matches our
   `phases/phase-N/todo.md` structure exactly.
 - **"Todo file for each Phase"** on the whiteboard list → matches our phase todos (13-doc list).
-- **Intentional difference (no structure change):** `SEO`, `Home/About`,
-  `house plan / home page` appear on the whiteboard → these are **website/UI concerns**
-  handled in **Phase 4 (Website Structure & UI/UX)**, not separate deliverables.
-- Full item-by-item comparison: `docs/doctor-sources/whiteboard/whiteboard-notes.md` §9.
+**Phase division status:**
+> الدكتور ذكر Phase 1, 2, 3 صراحة.
+> Phase 4-7 = مقترح فريق (Draft — pending confirmation).
 
 **Difference already found in reference sources (declared openly):**
 `_incoming/senior-implementation-rules` defines a different documentation model

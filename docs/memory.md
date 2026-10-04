@@ -70,6 +70,8 @@ Last updated: 2026-10-04 (Session 7 — aim45an diagrams analyzed: 8 actors, 12 
 | OQ-06 | Which actors are in scope (admin, customer service, billing, sales, subscriber, technician…)? | Use cases (Phase 2) |
 | OQ-07 | Does the system include network/field-operations domains, or only business/support domains? | Modules, boundaries |
 | OQ-08 | Are there non-functional requirements stated by the doctor (users count, response time, security)? | Architecture, NFRs |
+| OQ-09 | ما هو التقسيم الرسمي للمراحل عند الدكتور؟ (Phase 1-3 مؤكد) | Phase 4–7 division |
+| OQ-10 | ما الذي يعنيه الدكتور بـ "Phases المتبقية"؟ | Phase 4–7 naming/scope |
 
 ---
 
@@ -93,8 +95,6 @@ Last updated: 2026-10-04 (Session 7 — aim45an diagrams analyzed: 8 actors, 12 
 - **Phase 1 / Phase 2 / Phase 3 confirmed by name** on the doctor's whiteboard.
 - **"اكتب phase في ملف منفصل"** (write each phase in a separate file) = our
   `phases/phase-N/todo.md` structure — confirmed.
-- **Discoveries:** `SEO`, `Home/About`, `house plan / home page` appear on the whiteboard →
-  handled in **Phase 4** (Website Structure); no structure change needed.
 
 ---
 
