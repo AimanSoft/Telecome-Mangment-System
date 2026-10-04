@@ -24,3 +24,7 @@ _incoming/*.zip
 uploads/
 # Temp files
 err.txt
+
+# Temp analysis files
+project_tree.txt
+report.txt
