@@ -1,0 +1,253 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-erd" name="ERD — Physical Data Model">
+    <mxGraphModel dx="606" dy="373" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-erd" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="مخطط الكيانات والعلاقات ERD — النموذج الفيزيائي (يتوافق مع docs/sql/init.sql)" vertex="1">
+          <mxGeometry height="40" width="1800" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="T_users" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="60" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_users_h" parent="T_users" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="users" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_users_b" parent="T_users" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;userId  UUID&lt;br&gt;username  VARCHAR UNIQUE&lt;br&gt;passwordHash  VARCHAR&lt;br&gt;&amp;nbsp;roleId  UUID&lt;br&gt;status  BOOLEAN&lt;br&gt;createdAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_roles" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="93" width="250" x="60" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="T_roles_h" parent="T_roles" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="roles" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_roles_b" parent="T_roles" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;roleId  UUID&lt;br&gt;name  VARCHAR UNIQUE&lt;br&gt;permissions  JSONB" vertex="1">
+          <mxGeometry height="65" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_customers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="370" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_customers_h" parent="T_customers" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="customers" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_customers_b" parent="T_customers" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="customerId  UUID&lt;br&gt;nationalIdRef  VARCHAR UNIQUE&lt;br&gt;fullName  VARCHAR&lt;br&gt;status  VARCHAR&lt;br&gt;branchId  UUID&lt;br&gt;createdAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_addresses" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="112" width="250" x="370" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="T_addresses_h" parent="T_addresses" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="addresses" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_addresses_b" parent="T_addresses" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="addressId  UUID&lt;br&gt;&amp;nbsp;customerId  UUID&lt;br&gt;city / district&lt;br&gt;street / zip" vertex="1">
+          <mxGeometry height="84" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_contacts" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="112" width="250" x="370" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="T_contacts_h" parent="T_contacts" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="contacts" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_contacts_b" parent="T_contacts" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;contactId  UUID&lt;br&gt;&amp;nbsp;customerId  UUID&lt;br&gt;phone  VARCHAR&lt;br&gt;isPrimary  BOOLEAN" vertex="1">
+          <mxGeometry height="84" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_sims" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="131" width="250" x="700" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_sims_h" parent="T_sims" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="sim_cards" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_sims_b" parent="T_sims" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;iccid  VARCHAR&lt;br&gt;status  VARCHAR&lt;br&gt;batchNo  VARCHAR&lt;br&gt;&amp;nbsp;msisdn  VARCHAR?&lt;br&gt;assignedAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="103" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_numbers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="93" width="250" x="700" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="T_numbers_h" parent="T_numbers" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="phone_numbers" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_numbers_b" parent="T_numbers" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;msisdn  VARCHAR&lt;br&gt;status  VARCHAR&lt;br&gt;reservedUntil  TIMESTAMP" vertex="1">
+          <mxGeometry height="65" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_simhist" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="131" width="250" x="700" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="T_simhist_h" parent="T_simhist" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="sim_status_history" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_simhist_b" parent="T_simhist" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;historyId  UUID&lt;br&gt;&amp;nbsp;iccid  VARCHAR&lt;br&gt;fromStatus / toStatus&lt;br&gt;changedBy  UUID&lt;br&gt;changedAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="103" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_packages" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1030" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_packages_h" parent="T_packages" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="packages" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_packages_b" parent="T_packages" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;packageId  UUID&lt;br&gt;name  VARCHAR&lt;br&gt;price  DECIMAL&lt;br&gt;dataQuotaMb  INT&lt;br&gt;voiceMinutes  INT&lt;br&gt;isActive  BOOLEAN" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_subs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1030" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="T_subs_h" parent="T_subs" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="subscriptions" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_subs_b" parent="T_subs" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="subscriptionId  UUID&lt;br&gt;&amp;nbsp;customerId  UUID&lt;br&gt;&amp;nbsp;iccid  VARCHAR&lt;br&gt;&amp;nbsp;packageId  UUID&lt;br&gt;status  VARCHAR&lt;br&gt;startDate / endDate" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_usage" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1030" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="T_usage_h" parent="T_usage" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="usage_records" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_usage_b" parent="T_usage" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;recordId  UUID&lt;br&gt;&amp;nbsp;subscriptionId  UUID&lt;br&gt;type  VARCHAR «CALL|SMS|DATA»&lt;br&gt;quantity  NUMERIC&lt;br&gt;unitPrice  DECIMAL&lt;br&gt;occurredAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_invoices" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="131" width="250" x="1360" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_invoices_h" parent="T_invoices" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="invoices" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_invoices_b" parent="T_invoices" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;invoiceId  UUID&lt;br&gt;&amp;nbsp;subscriptionId  UUID&lt;br&gt;amount  DECIMAL&lt;br&gt;dueDate  DATE&lt;br&gt;status  VARCHAR" vertex="1">
+          <mxGeometry height="103" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_items" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="112" width="250" x="1360" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="T_items_h" parent="T_items" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="invoice_items" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_items_b" parent="T_items" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;itemId  UUID&lt;br&gt;&amp;nbsp;invoiceId  UUID&lt;br&gt;description  VARCHAR&lt;br&gt;quantity / unitPrice" vertex="1">
+          <mxGeometry height="84" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_payments" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1380" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="T_payments_h" parent="T_payments" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="payments" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_payments_b" parent="T_payments" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;paymentId  UUID&lt;br&gt;&amp;nbsp;invoiceId  UUID&lt;br&gt;idempotencyKey  VARCHAR UNIQUE&lt;br&gt;amount  DECIMAL&lt;br&gt;status  VARCHAR&lt;br&gt;reference  VARCHAR" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_towers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="112" width="250" x="1690" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_towers_h" parent="T_towers" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="towers" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_towers_b" parent="T_towers" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;towerId  UUID&lt;br&gt;name  VARCHAR&lt;br&gt;lat / lng  DECIMAL&lt;br&gt;status  VARCHAR" vertex="1">
+          <mxGeometry height="84" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_incidents" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1690" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="T_incidents_h" parent="T_incidents" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="incidents" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_incidents_b" parent="T_incidents" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;incidentId  UUID&lt;br&gt;&amp;nbsp;towerId  UUID&lt;br&gt;&amp;nbsp;ticketId  UUID?&lt;br&gt;description  TEXT&lt;br&gt;status  VARCHAR&lt;br&gt;severity  VARCHAR" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_tickets" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="1690" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="T_tickets_h" parent="T_tickets" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="support_tickets" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_tickets_b" parent="T_tickets" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;ticketId  UUID&lt;br&gt;&amp;nbsp;customerId  UUID&lt;br&gt;&amp;nbsp;incidentId  UUID?&lt;br&gt;priority  VARCHAR&lt;br&gt;status  VARCHAR&lt;br&gt;slaDueAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="T_audit" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="150" width="250" x="2020" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="T_audit_h" parent="T_audit" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=12;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="audit_log" vertex="1">
+          <mxGeometry height="28" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="T_audit_b" parent="T_audit" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=10;whiteSpace=wrap;" value="&amp;nbsp;logId  BIGSERIAL&lt;br&gt;actorId  UUID&lt;br&gt;action  VARCHAR&lt;br&gt;entity / entityId&lt;br&gt;result  VARCHAR&lt;br&gt;occurredAt  TIMESTAMP" vertex="1">
+          <mxGeometry height="122" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="T_customers" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_users" value="1 .. *">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="T_roles" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_users" value="1 .. *">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="T_customers" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_addresses" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="T_customers" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_contacts" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="180" />
+              <mxPoint x="640" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="T_sims" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_numbers" value="1 .. 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="T_sims" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_simhist" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="170" />
+              <mxPoint x="990" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="T_packages" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_subs" value="1 .. *">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="T_customers_b" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="T_subs" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="300" />
+              <mxPoint x="660" y="470" />
+              <mxPoint x="1030" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="T_sims" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_subs" value="0..1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="T_subs" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_usage" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="T_subs" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_invoices" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="T_invoices" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_items" value="1 .. 1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="T_invoices" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_payments" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1650" y="170" />
+              <mxPoint x="1650" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="T_towers" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_incidents" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="T_incidents" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="T_tickets" value="0..1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="T_customers_b" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="T_tickets" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="229.5" />
+              <mxPoint x="330" y="790" />
+              <mxPoint x="1815" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erd_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="القيود الأساسية:&#xa;• فهارس فريدة: customers.nationalIdRef ، sim_cards.iccid ، phone_numbers.msisdn ، payments.idempotencyKey.&#xa;• لا توجد كتابة مباشرة بين قواعد بيانات الخدمات — كل خدمة تملك جداولها وتُشترك عبر الأحداث.&#xa;• nationalIdRef معرّف ربط محمي وليس المفتاح الأساسي العام للعميل." vertex="1">
+          <mxGeometry height="100" width="950" x="60" y="900" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

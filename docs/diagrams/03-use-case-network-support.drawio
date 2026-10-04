@@ -1,0 +1,173 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-uc-network-support" name="UC Network &amp; Support">
+    <mxGraphModel dx="1873" dy="1153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-uc-network-support" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="حالات استخدام الشبكة والأعطال والدعم الفني (UC-31 → UC-41)" vertex="1">
+          <mxGeometry height="40" width="1100" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eng" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="Network Engineer&#xa;مهندس الشبكة" vertex="1">
+          <mxGeometry height="90" width="50" x="70" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="sup" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="Support Agent&#xa;موظف الدعم الفني" vertex="1">
+          <mxGeometry height="90" width="50" x="70" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="cust" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="Customer&#xa;العميل" vertex="1">
+          <mxGeometry height="90" width="50" x="50" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="supadm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" value="Super Admin&#xa;المشرف العام" vertex="1">
+          <mxGeometry height="90" width="50" x="70" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="bn1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFF;strokeColor=#0B3FA8;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;" value="TCMS — وحدات الشبكة والأعطال والدعم" vertex="1">
+          <mxGeometry height="1010" width="1160" x="260" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uc31" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-31: Manage Towers&#xa;إدارة الأبراج" vertex="1">
+          <mxGeometry height="90" width="250" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc32" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-32: Manage Stations&#xa;إدارة المحطات" vertex="1">
+          <mxGeometry height="90" width="250" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc33" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-33: Manage Devices&#xa;إدارة الأجهزة" vertex="1">
+          <mxGeometry height="90" width="250" x="560" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc34" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-34: Manage Coverage Areas&#xa;إدارة مناطق التغطية" vertex="1">
+          <mxGeometry height="90" width="250" x="820" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc35" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-35: Report Incident&#xa;تسجيل بلاغ عطل" vertex="1">
+          <mxGeometry height="90" width="250" x="40" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uc36" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-36: Assign Incident to Tower&#xa;ربط العطل ببرج" vertex="1">
+          <mxGeometry height="90" width="250" x="300" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uc37" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-37: Track Incident&#xa;متابعة العطل" vertex="1">
+          <mxGeometry height="90" width="250" x="560" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uc38" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-38: Create Ticket&#xa;إنشاء تذكرة شكوى" vertex="1">
+          <mxGeometry height="90" width="250" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc39" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-39: Assign Ticket&#xa;إسناد التذكرة" vertex="1">
+          <mxGeometry height="90" width="250" x="300" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc40" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-40: Reply to Ticket&#xa;الرد على التذكرة" vertex="1">
+          <mxGeometry height="90" width="250" x="560" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc41" parent="bn1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0F62FE;fontStyle=1;align=center;" value="UC-41: Transfer Ticket&#xa;تحويل التذكرة" vertex="1">
+          <mxGeometry height="90" width="250" x="880" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="nn" parent="bn1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="العطل يُسجَّل أولاً ثم يُربط بالبرج المعني ثم يُتابع. التذكرة قد تنشأ يدوياً من العميل أو تلقائياً من نظام الإشعارات عند IncidentReported." vertex="1">
+          <mxGeometry height="70" width="1080" x="40" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e_1" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_2" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc32" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_3" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc33" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="945" y="265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_4" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc34" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_5" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_6" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc36" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_7" edge="1" parent="1" source="eng" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc37" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_8" edge="1" parent="1" source="sup" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="uc37" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_9" edge="1" parent="1" source="sup" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_10" edge="1" parent="1" source="sup" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc39" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="547" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_11" edge="1" parent="1" source="sup" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;entryX=0.317;entryY=0.064;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="110" y="469.99550512900225" as="sourcePoint" />
+            <mxPoint x="889.25" y="606.38" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_12" edge="1" parent="1" source="sup" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uc41" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_13" edge="1" parent="1" source="cust" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_14" edge="1" parent="1" source="cust" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" target="uc37" value="متابعة حالة العطل">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="505" />
+              <mxPoint x="890" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_15" edge="1" parent="1" source="supadm" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc41" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1410" y="1000" />
+              <mxPoint x="1410" y="690" />
+              <mxPoint x="1205" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_16" edge="1" parent="1" source="supadm" style="endArrow=none;html=1;strokeColor=#333333;strokeWidth=1.5;" target="uc39" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="553" />
+              <mxPoint x="640" y="553" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_17" edge="1" parent="1" source="uc38" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#333333;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" target="uc39" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_18" edge="1" parent="1" source="uc40" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#333333;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" target="uc41" value="&lt;&lt;extend&gt;&gt; تحويل عند الحاجة">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_19" edge="1" parent="1" source="uc36" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#333333;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" target="uc35" value="&lt;&lt;include&gt;&gt; ربط ببرج">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

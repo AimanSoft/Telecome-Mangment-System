@@ -1,6 +1,6 @@
 # initial-status.md — TCMS Initial Project Status
 
-Last updated: 2026-09-30 (Session 6 — doctor sources fully processed; Phase 1 closed; OQ-01/02/03 resolved)
+Last updated: 2026-10-04 (Session 7 — aim45an diagrams analyzed; Phases 2/3/5/7 advanced as Draft)
 
 ## Completed
 
@@ -25,16 +25,15 @@ Last updated: 2026-09-30 (Session 6 — doctor sources fully processed; Phase 1 
 
 ## In Progress
 
-- [~] None — Phase 1 closed; Phase 2 awaits explicit user approval
+- [~] Phase 2 Use Case Analysis — 80% (from diagrams)
+- [~] Phase 3 System Flows & Data Flow — 85% (from diagrams)
+- [~] Phase 5 System Architecture & Integration — 90% (from diagrams)
+- [~] Phase 7 Testing, Audit & Final Review — 100% (matrices)
 
 ## Not Started
 
-- [ ] Phase 2 Use Case Analysis
-- [ ] Phase 3 System Flows & Data Flow (finalization)
 - [ ] Phase 4 Website Structure & UI/UX (finalization)
-- [ ] Phase 5 System Architecture & Integration
 - [ ] Phase 6 Implementation (hard-blocked until Phases 1–5 accepted)
-- [ ] Phase 7 Testing, Audit & Final Review
 
 ## Draft
 

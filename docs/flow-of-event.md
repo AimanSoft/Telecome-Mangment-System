@@ -1,75 +1,49 @@
-# flow-of-event.md — TCMS Flow of Event
+# Flow of Event — TCMS
 
-Status: **Initial Draft.** Events listed here are business-level occurrences (things that
-happen in the domain and cause a state change), not technical message-broker events.
-Whether the system uses technical events/queues is an **open architectural decision**
-(`docs/architecture.md` §5) and is not decided.
+> Status: Draft — Based on aim45an diagrams (Team Decision, Pending Doctor)
+> Source: Sequence + Event Flow Diagrams (docs/diagrams/07-10, 28)
 
-Revised after Phase 2 fixes the use cases.
+## Event-Driven Architecture
 
----
+**Broker:** RabbitMQ 3 (Topic Exchange)
+**Exchange:** events.*
+**Pattern:** Publish/Subscribe + Commands
 
-## 1. Event catalogue (Draft)
+### Commands (Actors → System)
+| Command | Issuer | Handler |
+|---------|--------|---------|
+| CreateCustomer | Customer Service | Customer Service |
+| AssignSim | Customer Service | SIM & Number Service |
+| CreateSubscription | Customer Service | Subscription Service |
+| ProcessPayment | Customer | Payment Service |
+| ReportIncident | Network Engineer | Incident Service |
 
-| EV ID | Event | Trigger | Source | Effect (Draft) | State change |
-|---|---|---|---|---|---|
-| EV-01 | SubscriberRegistered | Sales agent completes registration | M-1/M-6 | Subscriber record created | none → Active |
-| EV-02 | PackageAssigned | Subscription saved | M-2 | Subscriber bound to package | Active + plan |
-| EV-03 | InvoiceIssued | Invoice confirmed | M-3 | Invoice available for payment | none → Open |
-| EV-04 | PaymentReceived | Payment saved | M-4 | Invoice balance reduced/closed | Open → Paid / Partial |
-| EV-05 | ComplaintLodged | Complaint saved | M-5 | Support ticket exists | none → Open |
-| EV-06 | ComplaintClosed | Resolution saved | M-5 | Complaint resolved | Open → Closed |
-| EV-07 | SubscriberDeactivated | Administrator confirms | M-1 | Subscriber no longer active | Active → Inactive |
-| EV-08 | UserAccountChanged | Administrator saves user/role | M-9 | Access rights changed + audit entry | — |
-| EV-09 | ReportGenerated | Report executed | M-8 | Result produced (transient) | — |
+### Events (System → Subscribers)
 
----
+| Event | Publisher | Subscribers | Payload |
+|-------|-----------|-------------|---------|
+| CustomerCreated | Customer Service | Billing, Notification, Audit | C-101 |
+| SimAssigned | SIM & Number Service | Subscription, Notification | iccid |
+| SubscriptionCreated | Subscription Service | Billing, Notification | SUB-501 |
+| InvoiceGenerated | Billing Service | Payment, Notification | INV-901 |
+| PaymentCompleted | Payment Service | Billing, Notification | ref |
+| InvoicePaid | Billing Service | Notification, Usage | INV-901 |
+| IncidentReported | Incident Service | Support, Notification | INC-204 |
+| TicketCreated | Support Service | Notification | TKT-000931 |
 
-## 2. Representative event flows (Draft)
+### Event Flow Example: Payment (UC-28)
 
-### EV-03 InvoiceIssued
-```
-Billing period selected
-  → charges computed
-    → invoice reviewed
-      → EVENT: InvoiceIssued
-        → invoice status = Open
-        → (possible downstream) payment reminder / notification — Assumption
-```
+### Message Policies
+- **Idempotency:** Payment uses idempotencyKey (UNIQUE)
+- **Retry:** 5 attempts then Dead Letter Queue
+- **Idempotent Consumer:** 24h cache window
+- **Partitioning:** partitionKey = aggregateId
+- **Command vs Event:** Command = imperative (do X), Event = past tense (X happened)
 
-### EV-04 PaymentReceived
-```
-Payment entered
-  → amount validated against invoice
-    → EVENT: PaymentReceived
-      → invoice balance updated
-        → invoice status = Paid (or Partial)
-          → (possible downstream) receipt generated — Assumption
-```
+## Diagram source
 
-### EV-05 → EV-06 Complaint lifecycle
-```
-Complaint created       → EVENT: ComplaintLodged (status Open)
-Handling notes recorded → status In Progress (Assumption)
-Resolution saved        → EVENT: ComplaintClosed (status Closed)
-```
-
----
-
-## 3. Notification / automation events — Assumptions
-
-These are **not confirmed**; they are candidates only:
-
-- Payment overdue reminder (needs due-date rules — OQ-08)
-- Complaint SLA breach alert (needs SLA definition — OQ-08)
-- Subscriber deactivation due to non-payment
-
----
-
-## 4. Open questions
-
-- Does the doctor expect "events" as UML/system events, message events, or domain events?
-  (OQ-01)
-- Which events are observable/integrated with external systems? (`docs/architecture.md`)
-- Retention/audit requirements for events (senior-rules LOG-01 suggests full activity
-  logging — not confirmed as a project requirement).
+- `docs/diagrams/07-sequence-identity-verification.drawio`
+- `docs/diagrams/08-sequence-payment-invoice.drawio`
+- `docs/diagrams/09-sequence-sim-subscription.drawio`
+- `docs/diagrams/10-sequence-incident-ticket.drawio`
+- `docs/diagrams/28-event-flow-diagram.drawio`

@@ -1,105 +1,90 @@
-# architecture.md — TCMS Architecture
+# System Architecture — TCMS
 
-Status: **Architecture Initial Draft — NOT a final architecture.**
-No style (monolith / modular monolith / microservices / event-driven), no technology
-stack, and no infrastructure is decided here. Such decisions are `Pending Decision`
-(PD-04, PD-05 in `docs/memory.md`).
+> Status: Draft — Based on aim45an diagrams
+> ⚠️ TEAM DECISION — Pending Doctor approval
+> The team proposes Microservices + Event-Driven. Doctor has not yet approved.
 
----
+## 1. Architectural Style
 
-## 1. Purpose & scope of this draft
+**Proposed:** Microservices + Event-Driven
+**Alternative (not decided):** Modular Monolith
 
-- Describe the initial components the system will need.
-- Mark system boundaries and integration points.
-- Record open architectural decisions.
+## 2. Technology Stack (Proposed)
 
-Out of scope: deployment topology, vendor selection, stack selection, capacity planning.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Angular (SPA) |
+| API Gateway | NestJS :3000 |
+| Services | Node.js 20 (Alpine) |
+| Database | PostgreSQL 16 |
+| Message Broker | RabbitMQ 3 |
+| Cache | Redis 7 |
+| Deployment | Docker Compose |
+| Repo Structure | Monorepo (npm workspaces) |
 
----
+## 3. Components (12 Services)
 
-## 2. System boundary
+M1-M12 — see use-case-scenario.md
 
-**Inside the boundary (assumed):** web application for internal telecom-operator workflows
-(subscribers, packages, billing, payments, complaints, sales, inventory?, reports, admin).
+## 4. Layers
 
-**Outside the boundary (candidates — unconfirmed):**
+### Presentation Layer
+- Web Portal (Angular) — بوابة المشتركين
+- Employee Console — وحدة موظف خدمة العملاء
+- Admin Dashboard — لوحة الإدارة والتقارير
+- Mobile App (Mock)
 
-| External system | Why it may be needed | Status |
-|---|---|---|
-| Payment channel / bank | settling payments | Assumption (OQ-08) |
-| Usage/CDR source | usage-based billing | Assumption (OQ-08) |
-| Notification gateway (SMS/email) | complaints, invoices, reminders | Assumption |
-| Identity provider (SSO/LDAP) | user authentication | Assumption — likely simple auth first |
-| Reporting/BI tool | advanced analytics | Assumption |
+### API Layer
+- API Gateway (NestJS :3000)
+- JWT Guard + Rate Limit
+- Request Logging + Proxy
+- Auth Middleware (JWT + RBAC)
+- Health / Circuit Breaker
 
-No external integration is confirmed by the doctor's sources (not available).
+### Services Layer (12 Microservices)
+M1-M12 as described
 
----
+### Integration Layer (Mock Adapters)
+- Identity Adapter (timeout 3000ms + circuit breaker)
+- Payment Adapter (HMAC signature + idempotency)
+- SMS / Email Adapter (Queue-based retry)
+- Network Adapter (BSS / OSS Mock)
 
-## 3. Initial components (Draft)
+### Data + Event Layer
+- RabbitMQ 3 (Topic Exchange events.*)
+- PostgreSQL 16 (customers, invoices, support_tickets)
+- Redis 7 (Cache + Session + Rate Limit)
+- Audit Log Store
 
-```
-[ Web UI (browser) ]
-        │
-        │  (protocol TBD)
-        ▼
-[ Application layer ]
-  ├── Authentication & authorization
-  ├── Subscriber management
-  ├── Packages & subscriptions
-  ├── Billing & payments
-  ├── Complaints & support
-  ├── Sales/orders
-  ├── Inventory (?)            — Assumption
-  ├── Reporting
-  └── Audit & activity logging
-        │
-        ▼
-[ Data store ]   (technology TBD — not decided)
-        │
-        ▼
-[ Integration layer ]  → external systems (if confirmed)
-```
+## 5. External Systems (Mock)
+- Identity System
+- Payment Gateway
+- SMS / Email Provider
+- Monitoring (Prometheus + Grafana Mock)
 
-Component list derives from modules M-1…M-9 (`use-case-scenario.md` §3).
+## 6. Deployment (Docker Compose)
 
----
+- api-gateway :3000
+- customer-service :4001
+- billing-service :4002
+- support-service :4003
+- postgres :5432
+- rabbitmq :5672 / :15672
+- redis :6379
 
-## 4. Communication considerations (options, not decisions)
+Network: tcms_net (internal)
 
-| Concern | Options seen | Status |
-|---|---|---|
-| Client–server protocol | Server-rendered pages / REST API + SPA / hybrid | Open decision |
-| Internal component communication | in-process calls / messages | Open decision |
-| Async work (billing runs, notifications) | background jobs / queue / synchronous | Open decision |
-| Data consistency for billing & payments | single transaction vs eventual | Open decision |
+## 7. Open Architectural Decisions
 
----
+- [ ] Doctor approval of Microservices vs Monolith
+- [ ] Doctor approval of specific stack
+- [ ] Cloud deployment target
+- [ ] Database per service vs shared
 
-## 5. Open architectural decisions (must not be decided prematurely)
+## Diagram source
 
-| ID | Decision | Candidate options | When to decide |
-|---|---|---|---|
-| AD-1 | Architectural style | Modular monolith / microservices / event-driven / layered | Phase 5 |
-| AD-2 | Technology stack (language, framework, DB) | — | Phase 5–6 (PD-04) |
-| AD-3 | Deployment environment | On-prem / cloud / course-provided | Phase 5 |
-| AD-4 | Integration approach with external systems | Point-to-point / API gateway / messaging | Phase 5 |
-| AD-5 | AuthN approach | Simple credentials / SSO / directory | Phase 5 |
-| AD-6 | Reporting approach | In-app queries / separate store / export | Phase 5 |
-
----
-
-## 6. Constraints & quality drivers (unknown → Open Questions)
-
-- Expected user count, availability, retention, and regulatory constraints are unknown
-  (OQ-08). Architecture cannot be finalized without them.
-- Security baseline (senior-rules SEC) is treated as good practice but the doctor's
-  required security scope is unknown.
-
----
-
-## 7. Explicit statements
-
-- This file does **not** approve any architecture.
-- Nothing in `implementation/`, no code, no schema exists or may be created from this
-  draft before Phase 5/6 gates are passed.
+- `docs/diagrams/18-component-diagram.drawio`
+- `docs/diagrams/19-deployment-diagram.drawio`
+- `docs/diagrams/16-class-diagram-domain-model.drawio`
+- `docs/diagrams/17-erd-database-schema.drawio`
+- `docs/diagrams/20-package-diagram.drawio`

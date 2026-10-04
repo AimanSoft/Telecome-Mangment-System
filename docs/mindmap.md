@@ -16,6 +16,13 @@ mindmap
       Lecture 02 text 21 pages
       Projects list 26
       Whiteboard Session 1
+    Diagrams Analysis
+      Actors 8
+      Modules 12
+      Use Cases 42
+      Entities 17
+      Architecture Microservices + Event-Driven
+      Diagrams 28 files
     Team 7 members
       AimanSoft owner
       aim45an
@@ -75,6 +82,14 @@ TCMS — Telecom Management System
 │   ├── Lecture 02 — text, 21 pages (lecture-02-text.md + summary)
 │   ├── Projects list — 26 projects, TCMS = #16 (projects/projects-list.txt)
 │   └── Whiteboard — Session 1 (whiteboard/whiteboard-notes.md)
+│
+├── Diagrams Analysis (aim45an — 28 diagrams, Draft pending Doctor)
+│   ├── Actors (8)
+│   ├── Modules (12)
+│   ├── Use Cases (42)
+│   ├── Entities (17)
+│   ├── Architecture (Microservices + Event-Driven)
+│   └── Diagrams (28 files)
 │
 ├── Team (7 members — docs/doctor-sources/team.md)
 │   ├── AimanSoft (owner)

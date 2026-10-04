@@ -14,36 +14,36 @@ Analyze and document all Use Cases for TCMS based on the confirmed actors and mo
 ## Tasks
 
 ### A. Preparation
-- [ ] Confirm final actor list from Phase 1 initial analysis
-- [ ] Cross-check actors against Doctor's whiteboard requirements
+- [x] Confirm final actor list from Phase 1 initial analysis
+- [x] Cross-check actors against Doctor's whiteboard requirements
 - [ ] Receive Use Case template (format specification)
 - [ ] Set naming conventions (UC-01, UC-02, ...)
 - [ ] Confirm level of detail (brief / casual / fully-dressed)
 
 ### B. Use Case Identification
-- [ ] List all candidate Use Cases per actor
-- [ ] Categorize by module (Subscribers, Services, Billing, Support, Network, Admin)
+- [x] List all candidate Use Cases per actor
+- [x] Categorize by module (Subscribers, Services, Billing, Support, Network, Admin)
 - [ ] Prioritize (Must-have / Should-have / Could-have)
 - [ ] Review with team (7 members)
 - [ ] Freeze the Use Case list
 
 ### C. Use Case Scenario Writing
-- [ ] For each Use Case: write Pre-conditions
-- [ ] For each Use Case: write Main Flow (Happy Path)
-- [ ] For each Use Case: write Alternate Flows
-- [ ] For each Use Case: write Exception Flows
-- [ ] For each Use Case: write Post-conditions
+- [~] For each Use Case: write Pre-conditions
+- [~] For each Use Case: write Main Flow (Happy Path)
+- [~] For each Use Case: write Alternate Flows
+- [~] For each Use Case: write Exception Flows
+- [~] For each Use Case: write Post-conditions
 - [ ] Cross-reference with data entities from Phase 1
 
 ### D. Use Case Action Writing
-- [ ] For each Use Case: identify Actor Actions
-- [ ] For each Use Case: identify System Actions
-- [ ] Map Action → Trigger → Result
+- [~] For each Use Case: identify Actor Actions
+- [~] For each Use Case: identify System Actions
+- [~] Map Action → Trigger → Result
 - [ ] Verify coverage (each UC has at least 1 action)
 
 ### E. Diagram (if required by Doctor)
-- [ ] Create Use Case Diagram (UML)
-- [ ] Show Actors, Use Cases, relationships
+- [x] Create Use Case Diagram (UML)
+- [x] Show Actors, Use Cases, relationships
 - [ ] Include «include» and «extend» where applicable
 - [ ] Save as docs/diagrams/use-case-diagram.png or .puml
 

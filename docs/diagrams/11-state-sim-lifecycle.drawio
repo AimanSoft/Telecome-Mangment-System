@@ -1,0 +1,132 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-state-sim" name="State — SIM Card Lifecycle">
+    <mxGraphModel dx="1373" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-state-sim" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="مخطط إدارة الحالة — دورة حياة شريحة الاتصال SIM Card Lifecycle" vertex="1">
+          <mxGeometry height="40" width="1200" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Tv_bF88_BBMcpdSKanvJ-1" edge="1" parent="1" source="sim_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="s_new">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sim_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="20" y="156.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_new" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;align=center;" value="NEW&#xa;توريد للفرع&#xa;(ICCID أُنشئ)" vertex="1">
+          <mxGeometry height="84" width="170" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_assigned" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;align=center;" value="ASSIGNED&#xa;مخصّصة لعميل" vertex="1">
+          <mxGeometry height="84" width="170" x="350" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_activated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#EAF2FD;strokeColor=#0F62FE;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=13;" value="ACTIVATED&#xa;مفعّلة" vertex="1">
+          <mxGeometry height="139" width="470" x="590" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="s_normal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;align=center;" value="NormalUsage&#xa;استهلاك عادي" vertex="1">
+          <mxGeometry height="74" width="200" x="615" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="s_restricted" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#FFF4E5;strokeColor=#F1A208;fontStyle=1;align=center;" value="UsageRestricted&#xa;الباقة مستنفدت" vertex="1">
+          <mxGeometry height="74" width="190" x="845" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="s_susp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#FFF4E5;strokeColor=#F1A208;fontStyle=1;align=center;" value="SUSPENDED_TEMP&#xa;إيقاف مؤقت" vertex="1">
+          <mxGeometry height="84" width="200" x="590" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s_block" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;align=center;" value="BLOCKED&#xa;حظر أمني / إداري" vertex="1">
+          <mxGeometry height="84" width="200" x="860" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Tv_bF88_BBMcpdSKanvJ-3" edge="1" parent="1" source="s_term" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="980,648_o">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_term" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;align=center;" value="TERMINATED&#xa;إلغاء نهائي" vertex="1">
+          <mxGeometry height="84" width="200" x="700" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="980,648_o" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="980" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="980,648_i" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="16" width="16" x="989" y="657" as="geometry" />
+        </mxCell>
+        <mxCell id="sim_t0" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_new" value="توريد">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sim_t1" edge="1" parent="1" source="s_new" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_assigned" value="تخصيص لعميل&#xa;(Assign)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sim_t2" edge="1" parent="1" source="s_assigned" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_activated" value="التفعيل الأول&#xa;(Activate)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sim_t3" edge="1" parent="1" source="s_normal" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_restricted" value="استهلاك الحد">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="270" />
+              <mxPoint x="940" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t4" edge="1" parent="1" source="s_restricted" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_normal" value="شحن / تجديد">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="340" />
+              <mxPoint x="650" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t5" edge="1" parent="1" source="s_activated" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_susp" value="طلب العميل أو&#xa;عدم السداد">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="330" />
+              <mxPoint x="700" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t6" edge="1" parent="1" source="s_susp" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_activated" value="سداد / إلغاء الإيقاف">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="440" />
+              <mxPoint x="560" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t7" edge="1" parent="1" source="s_activated" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_block" value="اشتباه احتيال">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="330" />
+              <mxPoint x="1100" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t8" edge="1" parent="1" source="s_block" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_activated" value="رفع الحظر بعد&#xa;المراجعة">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="400" />
+              <mxPoint x="1130" y="240" />
+              <mxPoint x="1060" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t9" edge="1" parent="1" source="s_susp" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_term" value="تجاوز مهلة السماح">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="520" />
+              <mxPoint x="690" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t10" edge="1" parent="1" source="s_block" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="s_term" value="مصادرة الرقم">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="520" />
+              <mxPoint x="960" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sim_t11" edge="1" parent="1" source="s_term" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" value="إعادة تدوير الرقم">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n_sim" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="كل انتقال يُسجَّل في SIM_Status_History بمنفّذه وتاريخه.&#xa;الانتقال من ASSIGNED أو ACTIVATED إلى TERMINATED لا يُسمح إلا بعد انتهاء الحساب أو بقرار إداري موثّق." vertex="1">
+          <mxGeometry height="80" width="700" x="60" y="810" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

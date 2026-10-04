@@ -1,97 +1,115 @@
-# use-case-scenario.md — TCMS Use Case Scenarios
+# Use Case Scenarios — TCMS
 
-Status: **Initial Draft — not a final use case analysis.**
-This file will be revised in **Phase 2 (Use Case Analysis)**, once the doctor's
-requirements and the confirmed module/actor lists exist.
+> Status: Draft — Based on aim45an diagrams (2026-10-04)
+> Author: أيمن عبد الوهاب (aim45an)
+> Pending: Doctor's template confirmation
 
-Source of content: project brief only (Telecom Management System). No doctor materials
-were available → every line below is `Draft`.
+## 1. Actors (8)
 
----
+| ID | Actor | Arabic | Role |
+|----|-------|--------|------|
+| A-01 | Super Admin | المشرف العام | Full system access |
+| A-02 | Company Admin | مدير الشركة | Company-level management |
+| A-03 | Branch Manager | مدير الفرع | Branch-level management |
+| A-04 | Customer Service | موظف خدمة العملاء | Customer operations |
+| A-05 | Customer | العميل | End user (self-service + own data) |
+| A-06 | Accountant | المحاسب | Billing & payments |
+| A-07 | Network Engineer | مهندس الشبكة | Network infrastructure |
+| A-08 | Support Agent | موظف الدعم الفني | Ticket handling |
 
-## 1. How to read this file
+## 2. Modules (12)
 
-| Marker | Meaning |
-|---|---|
-| Draft | Proposed, not confirmed |
-| Assumption | Reasonable inference, no source yet |
-| Open Question | Needs the user/doctor |
+| ID | Module | Arabic |
+|----|--------|--------|
+| M1 | Identity Service | خدمة الهوية والوصول |
+| M2 | Customer Service | خدمة العملاء |
+| M3 | SIM & Number Service | الشرائح والأرقام |
+| M4 | Product / Package Service | المنتجات والباقات |
+| M5 | Subscription Service | الاشتراكات |
+| M6 | Usage Service | شحن الاستهلاك |
+| M7 | Billing Service | الفواتير والاحصاء |
+| M8 | Payment Service | المدفوعات |
+| M9 | Network Service | الشبكة |
+| M10 | Incident Service | الأعطال |
+| M11 | Support Service | الدعم الفني |
+| M12 | End-to-End | دورة العمل الكاملة |
 
----
+## 3. Use Cases (42)
 
-## 2. Actors (Draft — pending confirmation, OQ-06)
+### M1 — Identity Service
+- UC-01: Login / تسجيل الدخول
+- UC-02: Logout / تسجيل الخروج
+- UC-03: Register User / إنشاء مستخدم
+- UC-04: Refresh Token / تحديث التوكن
 
-| ID | Actor | Description |
-|---|---|---|
-| A-1 | Administrator | Manages users, roles, and system configuration |
-| A-2 | Customer Service Agent | Handles subscriber inquiries and complaints |
-| A-3 | Billing Officer | Manages invoices, payments, adjustments |
-| A-4 | Sales Agent | Registers subscribers and sells packages |
-| A-5 | Subscriber (End customer) | Views own account/invoice (if self-service is in scope — Assumption) |
-| A-6 | Technician / Field engineer | Network/field tasks (Assumption — may be out of scope, OQ-07) |
+### M2 — Customer Service
+- UC-05: Create Customer / إنشاء عميل
+- UC-06: Update Customer / تحديث بيانات عميل
+- UC-07: Delete Customer / حذف عميل
+- UC-08: List Customers / عرض قائمة العملاء
+- UC-09: View Customer Details / عرض تفاصيل عميل
+- UC-01V: Verify National ID / التحقق من الرقم الوطني
 
----
+### M3 — SIM & Number Service
+- UC-10: Create SIM / إنشاء شريحة
+- UC-11: Activate SIM / تفعيل الشريحة وتخصيصها
+- UC-12: Suspend SIM / إيقاف شريحة
+- UC-13: Block SIM / حظر شريحة
+- UC-14: Assign Phone Number / تخصيص رقم هاتف
 
-## 3. Modules (Draft — pending confirmation, PD-02)
+### M4 — Product / Package Service
+- UC-15: Create Package / إنشاء باقة
+- UC-16: Update Package / تحديث باقة
+- UC-17: Delete Package / حذف باقة
+- UC-18: List Packages / عرض الباقات
 
-| ID | Module | Purpose (Draft) |
-|---|---|---|
-| M-1 | Subscriber Management | Create, search, update, deactivate subscribers |
-| M-2 | Packages & Offers | Maintain plans/offers; assign to subscribers |
-| M-3 | Billing & Invoicing | Generate invoices from usage/plans |
-| M-4 | Payments | Record and reconcile payments |
-| M-5 | Complaints & Support | Raise, assign, resolve complaints |
-| M-6 | Sales & Orders | Handle subscription orders |
-| M-7 | Inventory (SIM / Devices) | Track SIMs and devices (Assumption) |
-| M-8 | Reporting & Dashboards | Operational and management reports |
-| M-9 | Administration & Roles | Users, roles, permissions, audit logs |
+### M5 — Subscription Service
+- UC-19: Create Subscription / إنشاء اشتراك
+- UC-20: Renew Subscription / تجديد اشتراك
+- UC-21: Cancel Subscription / إلغاء اشتراك
 
----
+### M6 — Usage Service
+- UC-22: Record Call / تسجيل مكالمة
+- UC-23: Record Message / تسجيل رسالة
+- UC-24: Record Internet Usage / تسجيل استهلاك
 
-## 4. Use cases (Initial Draft — deliberately small set)
+### M7 — Billing Service
+- UC-25: Generate Invoice / إصدار فاتورة
+- UC-26: Calculate Amounts / حساب المبالغ
+- UC-27: Update Payment Status / تحديث حالة الدفع
 
-> Only a minimal set is listed. Dozens of use cases are **not** invented here; the full
-> set is a Phase 2 deliverable.
+### M8 — Payment Service
+- UC-28: Process Payment / تنفيذ عملية الدفع
+- UC-29: Recharge Balance / شحن رصيد
+- UC-30: Check Transaction Status / حالة العملية
 
-| UC ID | Name | Primary actor | Related module | Notes |
-|---|---|---|---|---|
-| UC-01 | Register a new subscriber | Sales Agent | M-1, M-6 | Draft |
-| UC-02 | Assign package to subscriber | Sales Agent | M-2, M-1 | Draft |
-| UC-03 | Generate monthly invoice | Billing Officer (system-assisted) | M-3 | Draft — trigger/automation unclear (OQ-08) |
-| UC-04 | Record a payment | Billing Officer | M-4 | Draft |
-| UC-05 | Lodge a complaint | Customer Service Agent | M-5 | Draft |
-| UC-06 | Resolve a complaint | Customer Service Agent | M-5 | Draft |
-| UC-07 | Deactivate subscriber | Administrator | M-1 | Draft |
-| UC-08 | Manage user accounts & roles | Administrator | M-9 | Draft |
-| UC-09 | View operational report | Administrator / Billing Officer | M-8 | Draft |
+### M9 — Network Service
+- UC-31: Manage Towers / إدارة الأبراج
+- UC-32: Manage Stations / إدارة المحطات
+- UC-33: Manage Devices / إدارة الأجهزة
+- UC-34: Manage Coverage Areas / إدارة مناطق التغطية
 
-Scenario descriptions (short form):
+### M10 — Incident Service
+- UC-35: Report Incident / تسجيل بلاغ عطل
+- UC-36: Assign Incident to Tower / ربط العطل بالبرج
+- UC-37: Track Incident / متابعة العطل
 
-### UC-01 Register a new subscriber — Draft
-- Preconditions: actor authenticated and authorized (Draft).
-- Main flow: search for duplicates → enter subscriber data → validate → save → subscriber active.
-- Alternate: existing subscriber found → update record instead.
-- Exception: validation fails → correct and retry.
-- Postcondition: subscriber record exists.
-- Data: subscriber, contact details, identification (Assumption about fields).
+### M11 — Support Service
+- UC-38: Create Ticket / إنشاء تذكرة شكوى
+- UC-39: Assign Ticket / إسناد التذكرة
+- UC-40: Reply to Ticket / الرد على التذكرة
+- UC-41: Transfer Ticket / تحويل التذكرة
 
-### UC-03 Generate monthly invoice — Draft
-- Preconditions: subscriber active, billing period open.
-- Main flow: select period → system computes charges → review → confirm → invoice created.
-- Open: is generation automatic or manual? Which inputs (plan, usage, taxes)? (OQ-08)
+### M12 — End-to-End
+- UC-42: Full Customer Lifecycle / دورة العميل الكاملة
 
-### UC-05 Lodge a complaint — Draft
-- Preconditions: subscriber exists.
-- Main flow: identify subscriber → select complaint type → describe → save → complaint open with reference.
-- Postcondition: complaint record exists and is trackable.
+## 4. Use Case Diagram
 
-(Other use cases expand in Phase 2 with full dressed format.)
+See: docs/diagrams/01-use-case-overview.drawio (+ PNG)
+Related: docs/diagrams/02-use-case-customer-lifecycle.drawio, docs/diagrams/03-use-case-network-support.drawio
 
----
+## 5. Open Questions
 
-## 5. Open questions for this file
-
-- OQ-06: confirm the actor list.
-- OQ-07: is the network/field domain in scope?
-- OQ-08: billing inputs and automation rules.
-- Are there use cases imposed by the doctor's materials not visible here? (OQ-01)
+- [ ] OQ-06: Doctor's approval of actor list?
+- [ ] Doctor's Use Case template?
+- [ ] Level of detail for each UC?

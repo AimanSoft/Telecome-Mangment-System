@@ -1,101 +1,102 @@
-# flow-of-action.md — TCMS Flow of Action
+# Flow of Action — TCMS
 
-Status: **Initial Draft.** Explicitly provisional: these flows are re-derived after the
-use cases are fixed in Phase 2 (`use-case-scenario.md`, `use-case-action.md`).
+> Status: Draft — Based on aim45an diagrams (Team Decision, Pending Doctor)
+> Source: Activity Diagrams in docs/diagrams/
 
-Scope: a representative flow per main operation. Not exhaustive.
+## UC-05: Create Customer (onboarding flow)
 
----
+**Actor:** Customer Service Employee
+**Trigger:** Customer visits branch with national ID
+**Precondition:** Employee logged in (UC-01)
 
-## 1. Flow of action — Subscriber registration (UC-01, Draft)
+### Main Flow:
+1. Employee enters national ID + phone + name
+2. System calls Identity System (Mock) to verify national ID
+3. IF VERIFIED (200 OK):
+   3.1 System creates customer record with status=ACTIVE
+   3.2 System publishes CustomerCreated event
+   3.3 System returns 201 Created with Customer_ID
+   3.4 Employee proceeds to UC-11 (Activate SIM)
+4. ELSE (NOT_FOUND / TIMEOUT):
+   4.1 System logs failure in Audit Log
+   4.2 System returns 400/408 error
+   4.3 Employee must retry or escalate
 
-```mermaid
-flowchart TD
-    A[Start: sales agent opens registration] --> B{Duplicate search}
-    B -- existing found --> C[Update existing record]
-    B -- none found --> D[Enter subscriber data]
-    D --> E{Validation}
-    E -- invalid --> D
-    E -- valid --> F[Save subscriber]
-    F --> G[End: subscriber active]
-    C --> G
-```
+### Postcondition:
+- Customer record exists with verified national ID
+- Audit log entry created
 
----
+## UC-11 + UC-14 + UC-19: SIM Activation & Subscription
 
-## 2. Flow of action — Package assignment (UC-02, Draft)
+**Actor:** Customer Service Employee
+**Trigger:** Customer approved, ready for SIM assignment
 
-```mermaid
-flowchart TD
-    A[Open subscriber record] --> B[List available packages]
-    B --> C[Select package]
-    C --> D{Validation / eligibility}
-    D -- fails --> B
-    D -- ok --> E[Save subscription]
-    E --> F[End]
-```
+### Main Flow:
+1. Employee posts SIM + MSISDN assignment
+2. SIM Service checks iccid availability
+3. SIM assigned → SIM_Status_History updated
+4. Employee creates subscription with package
+5. System validates package, price, quota
+6. Subscription created (PENDING_PAYMENT)
+7. Event SubscriptionCreated published → Notification Service notified
 
----
+## UC-28: Process Payment
 
-## 3. Flow of action — Invoice generation (UC-03, Draft)
+**Actor:** Customer
+**Trigger:** Customer selects unpaid invoice
 
-```mermaid
-flowchart TD
-    A[Select billing period] --> B[Compute charges]
-    B --> C[Review invoice]
-    C -- corrections needed --> B
-    C -- ok --> D[Issue invoice]
-    D --> E[End: invoice available]
-```
+### Main Flow (Success):
+1. Customer POST /api/v1/payments (invoiceId, amount, idempotencyKey)
+2. Payment Service validates invoice status
+3. Payment Gateway charges (with HMAC signature)
+4. Payment recorded SUCCESS
+5. Invoice marked PAID
+6. Event PaymentCompleted published
+7. Notification sent
 
-Open: automatic vs manual trigger (OQ-08).
+### Alternate Flow 1 (REJECTED):
+- Gateway returns 402 (INSUFFICIENT_FUNDS)
+- Payment status = FAILED
+- Customer notified of failure
 
----
+### Alternate Flow 2 (TIMEOUT):
+- Gateway doesn't respond in 3000ms
+- Payment status = PENDING_RECONCILIATION
+- Ticket created for manual reconciliation
+- Reconciliation runs later
 
-## 4. Flow of action — Payment recording (UC-04, Draft)
+## UC-35 + UC-36 + UC-38: Incident Report & Ticket
 
-```mermaid
-flowchart TD
-    A[Open invoice] --> B[Enter payment]
-    B --> C{Amount valid?}
-    C -- no --> B
-    C -- yes --> D[Save payment]
-    D --> E[Update invoice status]
-    E --> F[End]
-```
+**Actor:** Network Engineer / Customer
+**Trigger:** Tower/network failure detected
 
----
+### Main Flow:
+1. Network Engineer POST /api/v1/incidents (description, towerId)
+2. Incident Service verifies tower exists
+3. Incident created (OPEN)
+4. Event IncidentReported published
+5. IF customer-initiated: Support Service creates ticket
+6. Ticket assigned to Support Agent with SLA priority
 
-## 5. Flow of action — Complaint handling (UC-05/UC-06, Draft)
+## UC-38 → UC-41: Support Ticket Lifecycle
 
-```mermaid
-flowchart TD
-    A[Lodge complaint] --> B[Complaint open]
-    B --> C[Investigate / record notes]
-    C --> D{Resolved?}
-    D -- no --> C
-    D -- yes --> E[Close complaint]
-    E --> F[End]
-```
+**Actor:** Customer / Support Agent
 
----
+### Main Flow:
+1. Customer creates ticket (subject + category)
+2. System classifies + assigns priority (P0-P3)
+3. IF P0/P1 → SLA 4 hours
+   IF P2/P3 → SLA 24 hours
+4. Support Agent assigned
+5. Agent investigates, replies (UC-40)
+6. IF resolved → Ticket RESOLVED → CLOSED
+   IF need transfer → UC-41 → reassign
 
-## 6. Flow of action — User & role management (UC-08, Draft)
+(Add similar flows for each UC or UC group)
 
-```mermaid
-flowchart TD
-    A[Administrator opens users] --> B[Create or edit account]
-    B --> C[Assign role]
-    C --> D[Save]
-    D --> E[Audit log entry]
-    E --> F[End]
-```
+## Diagram source
 
----
-
-## 7. Revision note
-
-- All flows assume a web application with server-side validation — this is an
-  **Assumption**, not a decided architecture (see `docs/architecture.md`).
-- Flows will be reviewed against Phase 2 use cases and against the doctor's flow
-  requirements (there may be a prescribed flow format — Open Question OQ-01).
+- `docs/diagrams/04-activity-customer-onboarding.drawio`
+- `docs/diagrams/05-activity-payment-processing.drawio`
+- `docs/diagrams/06-activity-support-ticket.drawio`
+- `docs/diagrams/25-business-process-flow.drawio`

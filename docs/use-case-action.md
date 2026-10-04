@@ -1,113 +1,66 @@
-# use-case-action.md — TCMS Use Case Actions
+# Use Case Actions — TCMS
 
-Status: **Initial Draft.** Actions are derived from `use-case-scenario.md` (itself Draft).
-This file must be re-derived after Phase 2 confirms the use cases.
+> Status: Draft — Based on aim45an diagrams (Team Decision, Pending Doctor)
+> Format: Actor → Action → System Response → Result
+> Source: docs/diagrams/ (use-case, activity, sequence diagrams)
 
-Format per use case: the elementary actions of the main flow, in order, with the actor
-and the data touched. Alternate/exception flows are added in Phase 2.
+## Actions per Use Case (Extracted from Diagrams)
 
----
+| UC ID | Actor | Action | Result |
+|-------|-------|--------|--------|
+| UC-01 | All | login(username, password) | Token issued |
+| UC-02 | All (logged-in) | logout(token) | Token invalidated |
+| UC-03 | Super Admin | registerUser(username, role) | User created |
+| UC-04 | All (logged-in) | refreshToken(token) | New token issued |
+| UC-05 | Customer Service | createCustomer(nationalId, phone, name) | Customer created + audit log |
+| UC-06 | Customer Service | updateCustomer(customerId, data) | Customer record updated |
+| UC-07 | Super Admin | deleteCustomer(customerId) | Customer record removed |
+| UC-08 | Customer Service | listCustomers(filter) | Customer list returned |
+| UC-09 | Customer | viewCustomerDetails(customerId) | Own details returned |
+| UC-01V | Customer Service | verifyNationalId(nationalId) → Identity System (Mock) | VERIFIED (200 OK) / NOT_FOUND / TIMEOUT |
+| UC-10 | Customer Service | createSim(iccid) | SIM record created |
+| UC-11 | Customer Service | activateSim(iccid, msisdn) | SIM ASSIGNED + status history |
+| UC-12 | Customer Service | suspendSim(iccid) | SIM SUSPENDED |
+| UC-13 | Super Admin | blockSim(iccid) | SIM BLOCKED |
+| UC-14 | Customer Service | assignPhoneNumber(msisdn, iccid) | Number assigned (200 OK {iccid, msisdn, status: ASSIGNED}) |
+| UC-15 | Company Admin | createPackage(name, price, quota) | Package created |
+| UC-16 | Company Admin | updatePackage(packageId, data) | Package updated |
+| UC-17 | Company Admin | deletePackage(packageId) | Package removed |
+| UC-18 | Customer | listPackages() | Packages listed |
+| UC-19 | Customer Service | createSubscription(customerId, iccid, packageId) | Subscription PENDING_PAYMENT |
+| UC-20 | Customer Service | renewSubscription(subscriptionId) | Subscription renewed |
+| UC-21 | Customer Service | cancelSubscription(subscriptionId) | Subscription cancelled |
+| UC-22 | System (CDR, automatic) | recordCall(from, to, duration) | Usage record created |
+| UC-23 | System (SMS, automatic) | recordMessage(from, to) | Usage record created |
+| UC-24 | System (internet, automatic) | recordInternetUsage(subscriptionId, bytes) | Usage record created |
+| UC-25 | System (scheduled) | generateInvoice(subscriptionId) | Invoice UNPAID |
+| UC-26 | Accountant | calculateAmounts(invoiceId) | Amounts recalculated |
+| UC-27 | Accountant | updatePaymentStatus(invoiceId, status) | Invoice status updated |
+| UC-28 | Customer | processPayment(invoiceId, amount, idempotencyKey) | Payment SUCCESS/FAILED |
+| UC-29 | Customer | rechargeBalance(msisdn, amount) | Balance recharged |
+| UC-30 | Accountant | checkTransactionStatus(reference) | Status returned (SUCCESS / PENDING_RECONCILIATION / FAILED) |
+| UC-31 | Network Engineer | manageTowers(towerId, data) | Tower record maintained |
+| UC-32 | Network Engineer | manageStations(stationId, data) | Station record maintained |
+| UC-33 | Network Engineer | manageDevices(deviceId, data) | Device record maintained |
+| UC-34 | Network Engineer | manageCoverageAreas(areaId, data) | Coverage area maintained |
+| UC-35 | Network Engineer | reportIncident(description, towerId) | Incident OPEN + ticket created |
+| UC-36 | Network Engineer | assignIncidentToTower(incidentId, towerId) | Incident linked to tower |
+| UC-37 | Support Agent / Customer | trackIncident(incidentId) | Incident status returned |
+| UC-38 | Customer | createTicket(subject, category) | Ticket OPEN + assigned |
+| UC-39 | Support Agent | assignTicket(ticketId, agentId) | Ticket assigned |
+| UC-40 | Support Agent | replyToTicket(ticketId, message) | Reply sent |
+| UC-41 | Support Agent | transferTicket(ticketId, targetAgentId) | Ticket transferred |
+| UC-42 | Customer Service | fullCustomerLifecycle(customerId) | UC-05 → UC-11 → UC-14 → UC-19 → UC-25 → UC-28 executed |
 
-## UC-01 Register a new subscriber (Draft)
+## Diagram evidence
 
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Open subscriber registration form | Sales Agent | — |
-| 2 | Search existing subscribers (duplicate check) | Sales Agent | subscriber |
-| 3 | Enter subscriber data | Sales Agent | subscriber, contact |
-| 4 | Validate entered data | System | subscriber |
-| 5 | Save subscriber record | System | subscriber |
-| 6 | Confirm registration result | Sales Agent | — |
-
----
-
-## UC-02 Assign package to subscriber (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Open subscriber record | Sales Agent | subscriber |
-| 2 | List available packages | System | package |
-| 3 | Select package | Sales Agent | subscription |
-| 4 | Save subscription assignment | System | subscription, subscriber |
-
----
-
-## UC-03 Generate monthly invoice (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Select billing period | Billing Officer | billing period |
-| 2 | Compute charges for period | System | invoice, subscription, plan |
-| 3 | Review computed invoice | Billing Officer | invoice |
-| 4 | Confirm and issue invoice | Billing Officer | invoice |
-
----
-
-## UC-04 Record a payment (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Open invoice | Billing Officer | invoice |
-| 2 | Enter payment details | Billing Officer | payment |
-| 3 | Validate amount against invoice | System | payment, invoice |
-| 4 | Save payment and update invoice status | System | payment, invoice |
-
----
-
-## UC-05 Lodge a complaint (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Identify subscriber | Customer Service Agent | subscriber |
-| 2 | Select complaint category | Customer Service Agent | complaint |
-| 3 | Enter description | Customer Service Agent | complaint |
-| 4 | Save complaint with reference | System | complaint |
-
----
-
-## UC-06 Resolve a complaint (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Open complaint | Customer Service Agent | complaint |
-| 2 | Record handling steps/notes | Customer Service Agent | complaint |
-| 3 | Close complaint with resolution | Customer Service Agent | complaint |
-
----
-
-## UC-07 Deactivate subscriber (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Open subscriber record | Administrator | subscriber |
-| 2 | Confirm deactivation | Administrator | subscriber |
-| 3 | Set status to inactive | System | subscriber |
-
----
-
-## UC-08 Manage user accounts & roles (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Create/update user account | Administrator | user account |
-| 2 | Assign role | Administrator | role, user account |
-| 3 | Save changes | System | user account, audit log |
-
----
-
-## UC-09 View operational report (Draft)
-
-| # | Action | Actor | Data touched |
-|---|---|---|---|
-| 1 | Select report and period | Administrator / Billing Officer | report parameters |
-| 2 | Run report | System | reports over subscriber/invoice/payment |
-| 3 | View or export result | Actor | — (export scope: Open Question) |
-
----
+- Actor ↔ Use Case links: `docs/diagrams/01-use-case-overview.drawio`, `03-use-case-network-support.drawio`
+- Request/response details: sequence diagrams `07`–`10`
+- Automatic system actors (UC-22…UC-24): note in `01-use-case-overview.drawio`
+  (usage UCs are system-generated; no human actor)
 
 ## Notes
 
-- Permission per action (role × allowed action) is **not** specified here; it belongs to
-  the permissions matrix deliverable (Phase 5/6 per senior-rules IMP-03) and is currently
-  a Pending Decision.
-- No action here is confirmed by the doctor.
+- كل Actions مستخرجة من Activity + Sequence Diagrams
+- كل Use Case له Actor Action واحد على الأقل
+- Status: Draft — Team Decision, Pending Doctor

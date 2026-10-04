@@ -18,6 +18,12 @@ requirements and NFRs are known. This phase decides; it does not implement.
 - [ ] 8. Review `docs/Audit.md` item "Architecture reviewed"
 - [ ] 9. Phase 5 completion review
 
+### Diagram inputs (aim45an — Draft, pending Doctor)
+- [x] Components (docs/diagrams/18)
+- [x] Class Diagram (docs/diagrams/16)
+- [x] ERD (docs/diagrams/17)
+- [x] Deployment (docs/diagrams/19)
+
 ## Deliverables
 
 - [ ] `docs/architecture.md` — approved version (replaces Initial Draft)

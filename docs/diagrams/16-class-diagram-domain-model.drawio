@@ -1,0 +1,304 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-class-diagram" name="Class Diagram — Domain Model">
+    <mxGraphModel dx="1585" dy="975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-class-diagram" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="مخطط الكلاسات — نموذج المجال الرئيسي لنظام TCMS (طبقة الطومبو/الكيانات)" vertex="1">
+          <mxGeometry height="40" width="1700" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Cust" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="198" width="260" x="60" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Cust_h" parent="C_Cust" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Customer" vertex="1">
+          <mxGeometry height="30" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Cust_a" parent="C_Cust" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- customerId: string  «PK»&#xa;- nationalIdRef: string  «ربط محمي»&#xa;- fullName: string&#xa;- status: CustomerStatus&#xa;- createdAt: Date" vertex="1">
+          <mxGeometry height="102" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Cust_o" parent="C_Cust" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ create(): void&#xa;+ verifyIdentity(): Result&#xa;+ getSubscriptions(): Subscription[]" vertex="1">
+          <mxGeometry height="66" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Addr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="144" width="230" x="60" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Addr_h" parent="C_Addr" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Address" vertex="1">
+          <mxGeometry height="30" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Addr_a" parent="C_Addr" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- addressId: string  «PK»&#xa;- customerId: string  «FK»&#xa;- city: string&#xa;- street: string" vertex="1">
+          <mxGeometry height="84" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Addr_o" parent="C_Addr" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ validate(): boolean" vertex="1">
+          <mxGeometry height="30" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Contact" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="144" width="230" x="60" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Contact_h" parent="C_Contact" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Contact" vertex="1">
+          <mxGeometry height="30" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Contact_a" parent="C_Contact" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- contactId: string  «PK»&#xa;- customerId: string  «FK»&#xa;- phone: string&#xa;- isPrimary: boolean" vertex="1">
+          <mxGeometry height="84" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Contact_o" parent="C_Contact" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ notify(msg): void" vertex="1">
+          <mxGeometry height="30" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_SIM" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="198" width="250" x="420" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_SIM_h" parent="C_SIM" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="SimCard" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_SIM_a" parent="C_SIM" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- iccid: string  «PK»&#xa;- status: SimStatus&#xa;- batchNo: string&#xa;- assignedAt: Date" vertex="1">
+          <mxGeometry height="84" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_SIM_o" parent="C_SIM" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ assign(msisdn): void&#xa;+ activate(): void&#xa;+ suspend(): void&#xa;+ block(): void" vertex="1">
+          <mxGeometry height="84" width="250" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_MSISDN" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="144" width="250" x="420" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="C_MSISDN_h" parent="C_MSISDN" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="PhoneNumber" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_MSISDN_a" parent="C_MSISDN" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- msisdn: string  «PK»&#xa;- iccid: string  «FK»&#xa;- status: NumberStatus&#xa;- reservedUntil: Date" vertex="1">
+          <mxGeometry height="84" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_MSISDN_o" parent="C_MSISDN" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ release(): void" vertex="1">
+          <mxGeometry height="30" width="250" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Hist" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="162" width="250" x="420" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Hist_h" parent="C_Hist" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="SimStatusHistory" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Hist_a" parent="C_Hist" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- historyId: string  «PK»&#xa;- iccid: string  «FK»&#xa;- fromStatus: SimStatus&#xa;- toStatus: SimStatus&#xa;- changedBy: string" vertex="1">
+          <mxGeometry height="102" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Hist_o" parent="C_Hist" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ append(): void" vertex="1">
+          <mxGeometry height="30" width="250" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pkg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="180" width="260" x="780" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pkg_h" parent="C_Pkg" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Package" vertex="1">
+          <mxGeometry height="30" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pkg_a" parent="C_Pkg" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- packageId: string  «PK»&#xa;- name: string&#xa;- price: number&#xa;- dataQuotaMb: number&#xa;- voiceMinutes: number&#xa;- status: ActiveFlag" vertex="1">
+          <mxGeometry height="120" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pkg_o" parent="C_Pkg" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ calculateOverage(): number" vertex="1">
+          <mxGeometry height="30" width="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Sub" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="216" width="260" x="780" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Sub_h" parent="C_Sub" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Subscription" vertex="1">
+          <mxGeometry height="30" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Sub_a" parent="C_Sub" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- subscriptionId: string  «PK»&#xa;- customerId: string  «FK»&#xa;- iccid: string  «FK»&#xa;- packageId: string  «FK»&#xa;- status: SubStatus&#xa;- startDate / endDate: Date" vertex="1">
+          <mxGeometry height="120" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Sub_o" parent="C_Sub" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ activate(): void&#xa;+ renew(): void&#xa;+ cancel(): void" vertex="1">
+          <mxGeometry height="66" width="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Usage" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="162" width="260" x="780" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Usage_h" parent="C_Usage" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="UsageRecord" vertex="1">
+          <mxGeometry height="30" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Usage_a" parent="C_Usage" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- recordId: string  «PK»&#xa;- subscriptionId: string  «FK»&#xa;- type: UsageType  «SMS|CALL|DATA»&#xa;- quantity: number&#xa;- occurredAt: Date" vertex="1">
+          <mxGeometry height="102" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Usage_o" parent="C_Usage" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ aggregate(): UsageSummary" vertex="1">
+          <mxGeometry height="30" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inv" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="180" width="260" x="1180" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inv_h" parent="C_Inv" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Invoice" vertex="1">
+          <mxGeometry height="30" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inv_a" parent="C_Inv" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- invoiceId: string  «PK»&#xa;- subscriptionId: string  «FK»&#xa;- amount: number&#xa;- dueDate: Date&#xa;- status: InvoiceStatus" vertex="1">
+          <mxGeometry height="102" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inv_o" parent="C_Inv" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ calculateTotal(): number&#xa;+ markPaid(ref): void" vertex="1">
+          <mxGeometry height="48" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Item" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="144" width="250" x="1180" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Item_h" parent="C_Item" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="InvoiceItem" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Item_a" parent="C_Item" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- itemId: string  «PK»&#xa;- invoiceId: string  «FK»&#xa;- description: string&#xa;- quantity / unitPrice: number" vertex="1">
+          <mxGeometry height="84" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Item_o" parent="C_Item" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ subtotal(): number" vertex="1">
+          <mxGeometry height="30" width="250" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pay" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="198" width="270" x="1180" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pay_h" parent="C_Pay" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Payment" vertex="1">
+          <mxGeometry height="30" width="270" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pay_a" parent="C_Pay" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- paymentId: string  «PK»&#xa;- invoiceId: string  «FK»&#xa;- idempotencyKey: string  «UNIQUE»&#xa;- amount: number&#xa;- status: PayStatus&#xa;- reference: string" vertex="1">
+          <mxGeometry height="120" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Pay_o" parent="C_Pay" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ execute(): PayResult&#xa;+ reconcile(): void" vertex="1">
+          <mxGeometry height="48" width="270" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tower" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="144" width="250" x="1580" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tower_h" parent="C_Tower" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Tower" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tower_a" parent="C_Tower" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- towerId: string  «PK»&#xa;- name: string&#xa;- lat / lng: number&#xa;- status: TowerStatus" vertex="1">
+          <mxGeometry height="84" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tower_o" parent="C_Tower" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ coverageArea(): Area" vertex="1">
+          <mxGeometry height="30" width="250" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="162" width="250" x="1580" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inc_h" parent="C_Inc" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Incident" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inc_a" parent="C_Inc" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- incidentId: string  «PK»&#xa;- towerId: string  «FK»&#xa;- description: string&#xa;- status: IncidentStatus&#xa;- severity: Severity" vertex="1">
+          <mxGeometry height="102" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Inc_o" parent="C_Inc" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ assign(engineer): void" vertex="1">
+          <mxGeometry height="30" width="250" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tkt" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="216" width="270" x="1580" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tkt_h" parent="C_Tkt" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="SupportTicket" vertex="1">
+          <mxGeometry height="30" width="270" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tkt_a" parent="C_Tkt" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- ticketId: string  «PK»&#xa;- customerId: string  «FK»&#xa;- incidentId: string  «FK?»&#xa;- priority: Priority&#xa;- status: TicketStatus&#xa;- slaDueAt: Date" vertex="1">
+          <mxGeometry height="120" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Tkt_o" parent="C_Tkt" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ assign(agent): void&#xa;+ reply(): void&#xa;+ close(): void" vertex="1">
+          <mxGeometry height="66" width="270" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="C_User" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="162" width="250" x="1970" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="C_User_h" parent="C_User" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="User" vertex="1">
+          <mxGeometry height="30" width="250" as="geometry" />
+        </mxCell>
+        <mxCell id="C_User_a" parent="C_User" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- userId: string  «PK»&#xa;- username: string  «UNIQUE»&#xa;- role: Role&#xa;- status: ActiveFlag" vertex="1">
+          <mxGeometry height="84" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_User_o" parent="C_User" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ login(): Token&#xa;+ logout(): void" vertex="1">
+          <mxGeometry height="48" width="250" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Role" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0B3FA8;" value="" vertex="1">
+          <mxGeometry height="126" width="240" x="1970" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Role_h" parent="C_Role" style="html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;fillColor=#0F62FE;fontColor=#FFFFFF;strokeColor=#0B3FA8;" value="Role" vertex="1">
+          <mxGeometry height="30" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Role_a" parent="C_Role" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#FFFFFF;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="- roleId: string  «PK»&#xa;- name: string&#xa;- permissions: string[]" vertex="1">
+          <mxGeometry height="66" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_Role_o" parent="C_Role" style="html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=2;fillColor=#F4F7FB;strokeColor=#0B3FA8;fontSize=11;whiteSpace=wrap;" value="+ can(action): boolean" vertex="1">
+          <mxGeometry height="30" width="240" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="C_Cust" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Addr" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="C_Cust" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Contact" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="230" />
+              <mxPoint x="340" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="C_SIM" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_MSISDN" value="1 .. 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="C_SIM" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Hist" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="250" />
+              <mxPoint x="700" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="C_Sub" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_SIM" value="1 .. 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="C_Sub" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Pkg" value="* .. 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="C_Cust" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.106;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" target="C_Sub" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="255" y="70" />
+              <mxPoint x="740" y="80" />
+              <mxPoint x="740" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="C_Sub" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Usage" value="1 .. 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r9" edge="1" parent="1" source="C_Inv" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Sub" value="* .. 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r10" edge="1" parent="1" source="C_Inv" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Item" value="1 .. 1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r11" edge="1" parent="1" source="C_Pay" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="C_Inv" value="0..* .. 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1450" y="540" />
+              <mxPoint x="1490" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r12" edge="1" parent="1" source="C_Inc" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Tower" value="* .. 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r13" edge="1" parent="1" source="C_Tkt" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Inc" value="0..* .. 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r14" edge="1" parent="1" source="C_Tkt" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="C_Cust" value="* .. 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1695" y="850" />
+              <mxPoint x="1100" y="850" />
+              <mxPoint x="380" y="870" />
+              <mxPoint x="20" y="840" />
+              <mxPoint x="20" y="480" />
+              <mxPoint x="20" y="200" />
+            </Array>
+            <mxPoint x="60" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r15" edge="1" parent="1" source="C_User" style="endArrow=ERone;startArrow=ERmany;endFill=1;startFill=1;html=1;strokeWidth=1.5;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Role" value="* .. 1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r16" edge="1" parent="1" source="C_Cust" style="endArrow=none;startArrow=none;html=1;dashed=1;strokeWidth=1.4;strokeColor=#0F62FE;labelBackgroundColor=#FFFFFF;fontSize=11;" target="C_Pkg" value="اشتراك">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="325" />
+              <mxPoint x="910" y="325" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cls_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="ملاحظات التصميم:&#xa;• National_ID معرّف ربط محمي وليس المفتاح الأساسي العام؛ المفتاح الأساسي للعميل customerId داخلي.&#xa;• لا توجد مفاتيح أجنبية بين قواعد بيانات الخدمات المختلفة — الربط عبر معرّفات محلية + أحداث.&#xa;• SimStatusHistory و InvoiceItem و UsageRecord كيانات تتبّع (Audit/Detail) تُستعمل في التقارير." vertex="1">
+          <mxGeometry height="110" width="900" x="60" y="900" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -15,6 +15,12 @@ System Flows & Data Flow: finalize `flow-of-action.md`, `flow-of-event.md`, and
 - [ ] 6. Review `docs/Audit.md` items "Events reviewed", "Data Flow reviewed"
 - [ ] 7. Phase 3 completion review
 
+### Diagram inputs (aim45an — Draft, pending Doctor)
+- [x] Activity (docs/diagrams/04-06)
+- [x] Sequence (docs/diagrams/07-10)
+- [x] State (docs/diagrams/11-15)
+- [x] DFD (docs/diagrams/21-22)
+
 ## Deliverables
 
 - [ ] `docs/flow-of-action.md` — final

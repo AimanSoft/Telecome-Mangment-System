@@ -1,0 +1,235 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-seq-identity" name="Sequence — Identity Verification">
+    <mxGraphModel dx="2943" dy="1811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="2050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-seq-identity" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="مخطط التسلسل — التحقق من الرقم الوطني وإنشاء العميل (UC-05 + UC-01V)" vertex="1">
+          <mxGeometry height="40" width="1600" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l_cse" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" value="Customer Service&#xa;Employee" vertex="1">
+          <mxGeometry height="1700" width="170" x="60" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_fe" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#666666;fontStyle=1;" value="Frontend UI&#xa;واجهة المستخدم" vertex="1">
+          <mxGeometry height="1700" width="160" x="270" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_gw" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" value="API Gateway&#xa;JWT + Rate Limit" vertex="1">
+          <mxGeometry height="1700" width="160" x="470" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_cs" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" value="Customer Service&#xa;Microservice" vertex="1">
+          <mxGeometry height="1700" width="175" x="670" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_il" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" value="Integration Layer&#xa;Adapter + Timeout" vertex="1">
+          <mxGeometry height="1700" width="175" x="885" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_ids" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#FFE6CC;strokeColor=#D79B00;fontStyle=1;" value="Identity System (Mock)&#xa;نظام الهوية الخارجي" vertex="1">
+          <mxGeometry height="1700" width="185" x="1100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_db" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#FFF2CC;strokeColor=#D6B656;fontStyle=1;" value="Customers DB&#xa;(PostgreSQL)" vertex="1">
+          <mxGeometry height="1700" width="175" x="1325" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l_mq" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="RabbitMQ&#xa;Event Bus" vertex="1">
+          <mxGeometry height="1700" width="165" x="1540" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_0" parent="1" style="rounded=0;html=1;fillColor=#6C8EBF;fillOpacity=16;strokeColor=#6C8EBF;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="258" width="16" x="137" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_1" parent="1" style="rounded=0;html=1;fillColor=#666666;fillOpacity=16;strokeColor=#666666;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="258" width="16" x="342" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_2" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="202" width="16" x="542" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_3" parent="1" style="rounded=0;html=1;fillColor=#82B366;fillOpacity=16;strokeColor=#82B366;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="146" width="16" x="749.5" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_4" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="90" width="16" x="964.5" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_5" parent="1" style="rounded=0;html=1;fillColor=#D79B00;fillOpacity=16;strokeColor=#D79B00;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="34" width="16" x="1184.5" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_6" parent="1" style="rounded=0;html=1;fillColor=#D79B00;fillOpacity=16;strokeColor=#D79B00;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="50" width="16" x="1184.5" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_7" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="106" width="16" x="964.5" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_8" parent="1" style="rounded=0;html=1;fillColor=#D6B656;fillOpacity=16;strokeColor=#D6B656;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1404.5" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_9" parent="1" style="rounded=0;html=1;fillColor=#82B366;fillOpacity=16;strokeColor=#82B366;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="386" width="16" x="749.5" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_10" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="442" width="16" x="542" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_11" parent="1" style="rounded=0;html=1;fillColor=#666666;fillOpacity=16;strokeColor=#666666;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="498" width="16" x="342" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_12" parent="1" style="rounded=0;html=1;fillColor=#6C8EBF;fillOpacity=16;strokeColor=#6C8EBF;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="548" width="16" x="137" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_13" parent="1" style="rounded=0;html=1;fillColor=#B85450;fillOpacity=16;strokeColor=#B85450;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="218" width="16" x="1614.5" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_14" parent="1" style="rounded=0;html=1;fillColor=#D79B00;fillOpacity=16;strokeColor=#D79B00;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="50" width="16" x="1184.5" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_15" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="106" width="16" x="964.5" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_16" parent="1" style="rounded=0;html=1;fillColor=#82B366;fillOpacity=16;strokeColor=#82B366;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="218" width="16" x="749.5" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_17" parent="1" style="rounded=0;html=1;fillColor=#9673A6;fillOpacity=16;strokeColor=#9673A6;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="274" width="16" x="542" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_18" parent="1" style="rounded=0;html=1;fillColor=#666666;fillOpacity=16;strokeColor=#666666;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="330" width="16" x="342" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_19" parent="1" style="rounded=0;html=1;fillColor=#6C8EBF;fillOpacity=16;strokeColor=#6C8EBF;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="380" width="16" x="137" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tcms-seq-identity_20" parent="1" style="rounded=0;html=1;fillColor=#D6B656;fillOpacity=16;strokeColor=#D6B656;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="218" width="16" x="1404.5" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="1: إدخال الرقم الوطني والبيانات الأساسية">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="286" as="sourcePoint" />
+            <mxPoint x="350" y="286" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="2: POST /api/v1/customers {NationalID, Phone, Name}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="342" as="sourcePoint" />
+            <mxPoint x="550" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="3: CreateCustomerCommand (Bearer JWT + X-Request-Id)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="398" as="sourcePoint" />
+            <mxPoint x="757.5" y="398" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="4: VerifyNationalID(nationalId) — timeout 3000ms">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="454" as="sourcePoint" />
+            <mxPoint x="972.5" y="454" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="5: GET /v1/identity/verify/{NationalID}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="972.5" y="510" as="sourcePoint" />
+            <mxPoint x="1192.5" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="6: 200 OK { status: VERIFIED }">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1192.5" y="594" as="sourcePoint" />
+            <mxPoint x="972.5" y="594" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="7: VerificationResult = SUCCESS">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="972.5" y="650" as="sourcePoint" />
+            <mxPoint x="757.5" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.4;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="8: فحص عدم تكرار National_ID داخل قاعدة TCMS">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="706" as="sourcePoint" />
+            <mxPoint x="757.5" y="706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="9: INSERT customer (CustomerID, Status=ACTIVE, NationalID)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="762" as="sourcePoint" />
+            <mxPoint x="1412.5" y="762" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="10: ACK — تم إنشاء السجل">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1412.5" y="818" as="sourcePoint" />
+            <mxPoint x="757.5" y="818" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="11: publish CustomerCreated">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="874" as="sourcePoint" />
+            <mxPoint x="1622.5" y="874" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="12: 201 Created {CustomerID: C-101}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="930" as="sourcePoint" />
+            <mxPoint x="550" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="13: 201 Created">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="986" as="sourcePoint" />
+            <mxPoint x="350" y="986" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="14: عرض النجاح وإتاحة UC-11 تخصيص الشريحة">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="1042" as="sourcePoint" />
+            <mxPoint x="145" y="1042" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="altOK" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0B3FA8;arcSize=4;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;fontStyle=1;fontColor=#0B3FA8;size=170;" value="" vertex="1">
+          <mxGeometry height="548" width="1140" x="660" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="altOK_lbl" parent="1" style="text;html=1;align=left;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0B3FA8;whiteSpace=wrap;" value="alt [200 OK — VERIFIED]" vertex="1">
+          <mxGeometry height="24" width="1100" x="674" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="m15" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="15: 404 NOT_FOUND / TIMEOUT(3000ms) / UNAVAILABLE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1192.5" y="1188" as="sourcePoint" />
+            <mxPoint x="972.5" y="1188" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="16: VerificationResult = FAILED">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="972.5" y="1244" as="sourcePoint" />
+            <mxPoint x="757.5" y="1244" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m17" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeWidth=1.6;strokeColor=#0B3FA8;labelBackgroundColor=#FFFFFF;" value="17: INSERT audit_log (action=VERIFY_FAILED, result=FAILED)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="1300" as="sourcePoint" />
+            <mxPoint x="1412.5" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m18" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="18: 400 / 408 {code: IDENTITY_UNVERIFIED}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="757.5" y="1356" as="sourcePoint" />
+            <mxPoint x="550" y="1356" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m19" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="19: 400 Bad Request / 408 Timeout">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="1412" as="sourcePoint" />
+            <mxPoint x="350" y="1412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m20" edge="1" parent="1" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.4;strokeColor=#5A5A5A;labelBackgroundColor=#FFFFFF;" value="20: عرض الخطأ وحظر UC-11 و UC-19 (لا شريحة ولا اشتراك)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="1468" as="sourcePoint" />
+            <mxPoint x="145" y="1468" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="altFail" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0B3FA8;arcSize=4;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;fontStyle=1;fontColor=#0B3FA8;size=170;" value="" vertex="1">
+          <mxGeometry height="380" width="1560" x="50" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="altFail_lbl" parent="1" style="text;html=1;align=left;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0B3FA8;whiteSpace=wrap;" value="else [NOT_FOUND | TIMEOUT | UNAVAILABLE — لم يُنشأ عميل]" vertex="1">
+          <mxGeometry height="24" width="1520" x="64" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="sq_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="ملاحظة معمارية:&#xa;• Identity Service الداخلي (M1) = دخول مستخدمي TCMS والصلاحيات فقط.&#xa;• التحقق من الهوية الوطنية = النظام الخارجي المحاكى عبر Integration Layer.&#xa;• لا تُنسخ الاسم الرسمي أو تاريخ الميلاد إلى قاعدة TCMS." vertex="1">
+          <mxGeometry height="150" width="470" x="1800" y="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

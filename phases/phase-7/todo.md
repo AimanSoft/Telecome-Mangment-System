@@ -17,6 +17,10 @@ requirements, run the project audit, and produce the final consistency review.
 - [ ] 8. Final Done / Remaining / Next report
 - [ ] 9. Phase 7 completion review → project closure recommendation
 
+### Matrix deliverables (aim45an — Draft, pending Doctor)
+- [x] Traceability Matrix (docs/diagrams/23)
+- [x] CRUD Matrix (docs/diagrams/24)
+
 ## Deliverables
 
 - [ ] Test results / test plan evidence

@@ -1,0 +1,123 @@
+<mxfile host="Electron" agent="TCMS-Diagram-Generator">
+  <diagram id="tcms-state-ticket" name="State — Support Ticket Lifecycle">
+    <mxGraphModel dx="1373" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_tcms-state-ticket" parent="1" style="text;html=1;align=left;fontSize=22;fontStyle=1;fontColor=#0B2E59;verticalAlign=middle;" value="مخطط إدارة الحالة — دورة حياة تذكرة الدعم Ticket Lifecycle" vertex="1">
+          <mxGeometry height="40" width="1250" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2WX_M_rESuDVEwqQLJ9i-1" edge="1" parent="1" source="tk_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="t_open">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="30" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="t_open" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;align=center;" value="OPEN&#xa;مُنشأة" vertex="1">
+          <mxGeometry height="80" width="160" x="100" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t_assign" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;align=center;" value="ASSIGNED&#xa;مُسندة لموظف" vertex="1">
+          <mxGeometry height="80" width="180" x="340" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t_prog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;align=center;" value="IN_PROGRESS&#xa;قيد المعالجة" vertex="1">
+          <mxGeometry height="80" width="190" x="580" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t_res" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;align=center;" value="RESOLVED&#xa;تم الحل" vertex="1">
+          <mxGeometry height="80" width="170" x="840" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="2WX_M_rESuDVEwqQLJ9i-2" edge="1" parent="1" source="t_closed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1300,138_o">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_closed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;align=center;" value="CLOSED&#xa;مغلقة" vertex="1">
+          <mxGeometry height="80" width="160" x="1080" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#FFF4E5;strokeColor=#F1A208;fontStyle=1;align=center;" value="PENDING_CUSTOMER&#xa;بانتظار رد العميل" vertex="1">
+          <mxGeometry height="80" width="210" x="580" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="t_esc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;align=center;" value="ESCALATED&#xa;تصعيد" vertex="1">
+          <mxGeometry height="80" width="170" x="320" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="t_reopen" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#FFF4E5;strokeColor=#F1A208;fontStyle=1;align=center;" value="REOPENED&#xa;إعادة فتح" vertex="1">
+          <mxGeometry height="80" width="170" x="840" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="1300,138_o" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="1300" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="1300,138_i" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="16" width="16" x="1309" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t0" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_open" value="فتح التذكرة UC-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t1" edge="1" parent="1" source="t_open" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_assign" value="إسناد UC-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t2" edge="1" parent="1" source="t_assign" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_prog" value="بدء المعالجة">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t3" edge="1" parent="1" source="t_prog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_res" value="تأكيد الحل UC-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t4" edge="1" parent="1" source="t_res" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_closed" value="إقفال بعد التقييم">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tk_t5" edge="1" parent="1" source="t_prog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_pend" value="بانتظار معلومة">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="210" />
+              <mxPoint x="690" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t6" edge="1" parent="1" source="t_pend" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_prog" value="رد العميل">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="410" />
+              <mxPoint x="550" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t7" edge="1" parent="1" source="t_prog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_esc" value="تجاوز SLA">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="210" />
+              <mxPoint x="660" y="340" />
+              <mxPoint x="510" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t8" edge="1" parent="1" source="t_esc" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="t_assign" value="إعادة الإسناد UC-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="410" />
+              <mxPoint x="300" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t9" edge="1" parent="1" source="t_res" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_reopen" value="اعتراض العميل">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="925" y="210" />
+              <mxPoint x="925" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t10" edge="1" parent="1" source="t_reopen" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" target="t_assign" value="إعادة المعالجة">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="925" y="500" />
+              <mxPoint x="515" y="500" />
+              <mxPoint x="515" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tk_t11" edge="1" parent="1" source="t_closed" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.6;strokeColor=#333333;labelBackgroundColor=#FFFFFF;fontSize=12;" value="أرشفة">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n_tk" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;spacingLeft=6;" value="SLA: P0/P1 = 4 ساعات مع تصعيد تلقائي، باقي الأولويات = 24 ساعة.&#xa;كل انتقال يولّد حدثاً (TicketAssigned / TicketResolved / TicketEscalated) لإشعار العميل وموظف الدعم." vertex="1">
+          <mxGeometry height="70" width="720" x="60" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
