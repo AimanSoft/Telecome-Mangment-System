@@ -105,8 +105,8 @@
 
 ## 4. Use Case Diagram
 
-See: docs/diagrams/01-use-case-overview.drawio (+ PNG)
-Related: docs/diagrams/02-use-case-customer-lifecycle.drawio, docs/diagrams/03-use-case-network-support.drawio
+See: docs/diagrams/phase-2-use-cases/01-use-case-overview.drawio (+ PNG)
+Related: docs/diagrams/phase-2-use-cases/02-use-case-customer-lifecycle.drawio, docs/diagrams/phase-2-use-cases/03-use-case-network-support.drawio
 
 ## 5. Open Questions
 

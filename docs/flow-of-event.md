@@ -1,7 +1,7 @@
 # Flow of Event — TCMS
 
 > Status: Draft — Based on aim45an diagrams (Team Decision, Pending Doctor)
-> Source: Sequence + Event Flow Diagrams (docs/diagrams/07-10, 28)
+> Source: Sequence + Event Flow Diagrams (docs/diagrams/phase-3-flows/ — 07-10, 28)
 
 ## Event-Driven Architecture
 
@@ -42,8 +42,8 @@
 
 ## Diagram source
 
-- `docs/diagrams/07-sequence-identity-verification.drawio`
-- `docs/diagrams/08-sequence-payment-invoice.drawio`
-- `docs/diagrams/09-sequence-sim-subscription.drawio`
-- `docs/diagrams/10-sequence-incident-ticket.drawio`
-- `docs/diagrams/28-event-flow-diagram.drawio`
+- `docs/diagrams/phase-3-flows/07-sequence-identity-verification.drawio`
+- `docs/diagrams/phase-3-flows/08-sequence-payment-invoice.drawio`
+- `docs/diagrams/phase-3-flows/09-sequence-sim-subscription.drawio`
+- `docs/diagrams/phase-3-flows/10-sequence-incident-ticket.drawio`
+- `docs/diagrams/phase-3-flows/28-event-flow-diagram.drawio`

@@ -54,9 +54,9 @@
 
 ## Diagram evidence
 
-- Actor ↔ Use Case links: `docs/diagrams/01-use-case-overview.drawio`, `03-use-case-network-support.drawio`
+- Actor ↔ Use Case links: `docs/diagrams/phase-2-use-cases/01-use-case-overview.drawio`, `docs/diagrams/phase-2-use-cases/03-use-case-network-support.drawio`
 - Request/response details: sequence diagrams `07`–`10`
-- Automatic system actors (UC-22…UC-24): note in `01-use-case-overview.drawio`
+- Automatic system actors (UC-22…UC-24): note in `docs/diagrams/phase-2-use-cases/01-use-case-overview.drawio`
   (usage UCs are system-generated; no human actor)
 
 ## Notes

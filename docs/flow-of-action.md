@@ -96,7 +96,7 @@
 
 ## Diagram source
 
-- `docs/diagrams/04-activity-customer-onboarding.drawio`
-- `docs/diagrams/05-activity-payment-processing.drawio`
-- `docs/diagrams/06-activity-support-ticket.drawio`
-- `docs/diagrams/25-business-process-flow.drawio`
+- `docs/diagrams/phase-3-flows/04-activity-customer-onboarding.drawio`
+- `docs/diagrams/phase-3-flows/05-activity-payment-processing.drawio`
+- `docs/diagrams/phase-3-flows/06-activity-support-ticket.drawio`
+- `docs/diagrams/phase-3-flows/25-business-process-flow.drawio`

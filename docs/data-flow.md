@@ -1,7 +1,7 @@
 # Data Flow — TCMS
 
 > Status: Draft — Based on aim45an DFD diagrams (Team Decision, Pending Doctor)
-> Source: docs/diagrams/21-dfd-level-0-context.drawio, docs/diagrams/22-dfd-level-1.drawio
+> Source: docs/diagrams/phase-3-flows/21-dfd-level-0-context.drawio, docs/diagrams/phase-3-flows/22-dfd-level-1.drawio
 
 ## Level 0 — Context Diagram
 

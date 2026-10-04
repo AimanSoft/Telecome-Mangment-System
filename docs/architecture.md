@@ -83,8 +83,8 @@ Network: tcms_net (internal)
 
 ## Diagram source
 
-- `docs/diagrams/18-component-diagram.drawio`
-- `docs/diagrams/19-deployment-diagram.drawio`
-- `docs/diagrams/16-class-diagram-domain-model.drawio`
-- `docs/diagrams/17-erd-database-schema.drawio`
-- `docs/diagrams/20-package-diagram.drawio`
+- `docs/diagrams/phase-5-architecture/18-component-diagram.drawio`
+- `docs/diagrams/phase-5-architecture/19-deployment-diagram.drawio`
+- `docs/diagrams/phase-5-architecture/16-class-diagram-domain-model.drawio`
+- `docs/diagrams/phase-5-architecture/17-erd-database-schema.drawio`
+- `docs/diagrams/phase-5-architecture/20-package-diagram.drawio`
